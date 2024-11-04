@@ -35,5 +35,14 @@
     "enjoyDishes": "Disfrute de sus platos favoritos en empaques que mejoran la experiencia y aportan en la construcción de un futuro mucho más sostenible.",
     "placeNewOrder": "Haz un nuevo pedido",
     "downloadXiclo": "Descargar Xiclo"
+  },
+  "Partner": {
+    "nowReturn": "Ahora retornar es",
+    "easier": "más fácil,",
+    "moreEfficient": "más eficiente y más sostenible.",
+    "startTo": "Empiece a ",
+    "reduceFootprint": "reducir su huella",
+    "today": " hoy.",
+    "ordersReturnable": "Los pedidos en empaques retornables están disponibles en nuestras tiendas:"
   }
 }

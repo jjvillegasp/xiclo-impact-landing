@@ -1,7 +1,8 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { CardNumber } from "@/components/ui/card_number";
-import { CardTip } from "@/components/ui/card_tip";
+import { CardNumber } from "@/components/ui/card-number";
+import { CardPartner } from "@/components/ui/card-partner";
+import { CardTip } from "@/components/ui/card-tip";
 import { ChevronDown, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
@@ -145,37 +146,68 @@ const AboutProject = async ({
 }) => {
   const t = await getTranslations("AboutProject");
   return (
-    <div
-      className="mx-32 p-20 text-white rounded-xl bg-[linear-gradient(to_left,rgba(3,3,3,0.3),rgba(0,0,0,0.7)),url(/img.png)] bg-[length:100%_100%]"
-      id="about-project"
-    >
-      <p className="font-semibold text-xl">
-        {t("wasteFreeOrders")}
-        <br />
-        {t("flavorWithoutLimits")}
-      </p>
-      <br />
-      <p className="font-extrabold text-8xl">
-        {organizationName} <br /> {t("moreXiclo")}
-      </p>
-      <br />
-      <div className="text-lg w-[500px] text-left">
-        <p>
-          {organizationName} {t("joinXiclo")}
+    <div>
+      <div className="mx-40 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
+      <div
+        className="mx-32 p-20 text-white rounded-xl bg-[linear-gradient(to_left,rgba(3,3,3,0.3),rgba(0,0,0,0.7)),url(/img.png)] bg-[length:100%_100%]"
+        id="about-project"
+      >
+        <p className="font-semibold text-xl">
+          {t("wasteFreeOrders")}
+          <br />
+          {t("flavorWithoutLimits")}
         </p>
         <br />
-        <p>{t("enjoyDishes")}</p>
-      </div>
-      <div className="flex items-center mt-20 gap-12">
-        <div className="flex-1 justify-center">
-          <Button className="bg-white text-black">{t("placeNewOrder")}</Button>
+        <p className="font-extrabold text-8xl">
+          {organizationName} <br /> {t("moreXiclo")}
+        </p>
+        <br />
+        <div className="text-lg w-[500px] text-left">
+          <p>
+            {organizationName} {t("joinXiclo")}
+          </p>
+          <br />
+          <p>{t("enjoyDishes")}</p>
         </div>
-        <Avatar className="w-24 h-10">
-          <AvatarImage src={`/${organizationLogo}`} />
-        </Avatar>
-        <Avatar className="w-24 h-10">
-          <AvatarImage src="/xicloIcon.png" />
-        </Avatar>
+        <div className="flex items-center mt-20 gap-12">
+          <div className="flex-1 justify-center">
+            <Button className="bg-white text-black">
+              {t("placeNewOrder")}
+            </Button>
+          </div>
+          <Avatar className="w-24 h-10">
+            <AvatarImage src={`/${organizationLogo}`} />
+          </Avatar>
+          <Avatar className="w-24 h-10">
+            <AvatarImage src="/xicloIcon.png" />
+          </Avatar>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Partners = async ({ partners }: { partners: [] }) => {
+  const t = await getTranslations("Partner");
+  return (
+    <div className="mx-32 mt-10 mb-40">
+      <p className="text-lg">
+        {t("nowReturn")} <span className="font-extrabold">{t("easier")}</span>
+        <br /> <span className="font-extrabold">{t("moreEfficient")}</span>
+      </p>
+      <br />
+      <p className="text-5xl text-[#97C355]">
+        {t("startTo")}{" "}
+        <span className="font-extrabold">{t("reduceFootprint")}</span>{" "}
+        {t("today")}
+      </p>
+      <p className="mt-5 text-lg">{t("ordersReturnable")}</p>
+      <br />
+      <div className="flex gap-4">
+        <CardPartner className="bg-[url(/osaki.png)]" />
+        <CardPartner className="bg-[url(/cacio&pepe.png)]" />
+        <CardPartner className="bg-[url(/bat.png)]" />
+        <CardPartner className="bg-[url(/bueno.png)]" />
       </div>
     </div>
   );
@@ -230,6 +262,7 @@ export default function Home() {
         organizationLogo="logoTakami.png"
         organizationName="Takami"
       />
+      <Partners partners={[]} />
       <Footer organizationName="Takami" />
     </main>
   );
