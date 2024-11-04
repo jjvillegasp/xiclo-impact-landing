@@ -16,7 +16,7 @@ const Header = async ({ organizationLogo }: { organizationLogo: string }) => {
         <Avatar className="w-24 h-10">
           <AvatarImage src={`/${organizationLogo}`} />
         </Avatar>
-        <div className="flex justify-center m-3">
+        <div className="flex justify-center gap-8">
           <Button
             variant="link"
             className="text-white font-semibold hover:underline decoration-white"
@@ -52,7 +52,7 @@ const Header = async ({ organizationLogo }: { organizationLogo: string }) => {
   );
 };
 
-const Impact = async ({ organizationName }: { organizationName: string }) => {
+async function Impact({ organizationName }: { organizationName: string }) {
   const t = await getTranslations("Impact");
   return (
     <div className="p-20">
