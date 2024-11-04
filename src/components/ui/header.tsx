@@ -4,6 +4,7 @@ import { Button } from "./button";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { Play } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 type HeaderProps = {
   organizationLogo: string;
@@ -26,10 +27,16 @@ const Header = React.forwardRef<
           <AvatarImage src={`/${organizationLogo}`} />
         </Avatar>
         <div className="flex justify-center m-3">
-          <Button variant="link" className="text-white font-semibold">
-            {t("impact")}
+          <Button
+            variant="link"
+            className="text-white font-semibold hover:underline decoration-white"
+          >
+            <Link href="#contribution-section">{t("impact")}</Link>
           </Button>
-          <Button variant="link" className="text-white font-semibold">
+          <Button
+            variant="link"
+            className="text-white font-semibold hover:underline decoration-white"
+          >
             {t("aboutProject")}
           </Button>
         </div>
