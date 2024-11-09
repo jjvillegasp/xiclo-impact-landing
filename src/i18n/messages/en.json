@@ -8,5 +8,23 @@
     "discoverImpact": "Descubra el impacto que hemos logrado juntos con el uso de empaques retornables.",
     "viewVideo": "Ver video",
     "viewImpact": "Ver impacto"
+  },
+  "Impact": {
+    "contributionNumbers": "Contribution in numbers*",
+    "currentData": "*data updated in real time.",
+    "organizationFootprint": "{organization} Footprint",
+    "individualFootprint": "Individual footprint",
+    "waterSaved": "Liters of water saved.",
+    "wasteSaved": "Kg of waste saved.",
+    "packagingSaved": "Saved packaging.",
+    "tipOne": "Once returned, the gaskets are subjected to an industrial washing and control process.",
+    "tipTwo": "In case you need to wash them, you can do it in the dishwasher or using soap and water.",
+    "tipThree": "They are not microwaveable.",
+    "tipsOf": "Care ",
+    "care": "tips",
+    "designAssets": "Xiclo packaging is designed for safe and clean food transportation.",
+    "washingProcess": "Once returned, they are subjected to an industrial washing and control process before being returned to the restaurant.",
+    "remember": "Remember:",
+    "careAssets": "the more we take care of them, the more xiclos will be able to fulfill and the more efficient our contribution to the planet will be."
   }
 }

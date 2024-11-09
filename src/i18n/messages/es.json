@@ -8,5 +8,23 @@
     "discoverImpact": "Descubra el impacto que hemos logrado juntos con el uso de empaques retornables.",
     "viewVideo": "Ver video",
     "viewImpact": "Ver impacto"
+  },
+  "Impact": {
+    "contributionNumbers": "Contribución en cifras*",
+    "currentData": "*datos actualizados en tiempo real.",
+    "organizationFootprint": "Huella {organization}",
+    "individualFootprint": "Huella individual",
+    "waterSaved": "Litros de agua ahorrados.",
+    "wasteSaved": "Kg de residuos ahorrados.",
+    "packagingSaved": "Empaques ahorrados.",
+    "tipOne": "Una vez retornados, los empaques son sometidos a un proceso industrial de lavado y control.",
+    "tipTwo": "En caso de requerir lavarlos puede hacerlo en e lavavajillas o utilizando agua y jabón.",
+    "tipThree": "No son aptos para microondas.",
+    "tipsOf": "Tips de ",
+    "care": "cuidado",
+    "designAssets": "Los empaques Xiclo están diseñados para el transporte seguro y limpio de alimentos.",
+    "washingProcess": "Una vez retornados son sometidos a un proceso industrial de lavado y control antes de volver al restaurante.",
+    "remember": "Recuerde:",
+    "careAssets": "entre más los cuidemos, más xiclos podrán cumplir y más eficiente será nuestro aporte al planeta."
   }
 }
