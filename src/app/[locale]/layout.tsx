@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Xiclo SaaS",
-  description: "Xiclo para empresas",
+  title: "Xiclo",
+  description: "Xiclo landing",
 };
 
 export default function LocaleLayout({
