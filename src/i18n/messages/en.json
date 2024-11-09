@@ -26,5 +26,23 @@
     "washingProcess": "Once returned, they are subjected to an industrial washing and control process before being returned to the restaurant.",
     "remember": "Remember:",
     "careAssets": "the more we take care of them, the more xiclos will be able to fulfill and the more efficient our contribution to the planet will be."
+  },
+  "AboutProject": {
+    "wasteFreeOrders": "Waste-free orders,",
+    "flavorWithoutLimits.": "flavor without limits.",
+    "moreXiclo": "+ Xiclo.",
+    "joinXiclo": "joins Xiclo, the system that is revolutionizing returnable packaging logistics, with a powerful mission: to say goodbye to waste in our stores!",
+    "enjoyDishes": "Enjoy your favorite dishes in packaging that enhances the experience and contributes to building a more sustainable future.",
+    "placeNewOrder": "Place a new order",
+    "downloadXiclo": "Download Xiclo"
+  },
+  "Partner": {
+    "nowReturn": "Now return is",
+    "easier": "easier,",
+    "moreEfficient": "more efficient and more sustainable,",
+    "startTo": "Start to ",
+    "reduceFootprint": "reduce your footprint",
+    "today": " today.",
+    "ordersReturnable": "Orders in returnable packaging are available in our stores:"
   }
 }
