@@ -25,7 +25,11 @@
     "designAssets": "Los empaques Xiclo están diseñados para el transporte seguro y limpio de alimentos.",
     "washingProcess": "Una vez retornados son sometidos a un proceso industrial de lavado y control antes de volver al restaurante.",
     "remember": "Recuerde:",
-    "careAssets": "entre más los cuidemos, más xiclos podrán cumplir y más eficiente será nuestro aporte al planeta."
+    "careAssets": "entre más los cuidemos, más xiclos podrán cumplir y más eficiente será nuestro aporte al planeta.",
+    "startedAt": "Fecha de Inicio:",
+    "ranking": "Ranking",
+    "top": "Top ",
+    "usersFootprint": "de usuarios con mejor huella."
   },
   "AboutProject": {
     "wasteFreeOrders": "Pedidos sin residuos,",

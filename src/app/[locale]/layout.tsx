@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description: "Xiclo landing",
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  const locale = params.locale; // Access locale directly
+  const locale = await getLocale(await params); // Access locale directly
   return (
     <html lang={locale}>
       <body
@@ -29,4 +29,8 @@ export default function LocaleLayout({
       </body>
     </html>
   );
+}
+
+async function getLocale(params :any) {
+  return params.locale;
 }
