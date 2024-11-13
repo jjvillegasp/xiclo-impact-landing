@@ -1,5 +1,5 @@
-import * as React from "react";
 import { cn } from "@/lib/utils";
+import * as React from "react";
 
 type CardNumberProps = {
   number: number;
@@ -9,13 +9,13 @@ type CardNumberProps = {
 const CardNumber = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardNumberProps
->(async ({ className, number, label, ...props }, ref) => {
+>(async ({ className, number, label, ...props }) => {
   const format = new Intl.NumberFormat("es-CO");
   return (
     <div
       {...props}
       className={cn(
-        "text-center mr-5 rounded-xl bg-[length:100%_100%] text-white h-60",
+        "text-center mr-5 rounded-xl bg-cover text-white h-60",
         className
       )}
     >
