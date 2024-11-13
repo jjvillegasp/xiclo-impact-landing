@@ -11,7 +11,7 @@ const Header = ({ organizationLogo }: { organizationLogo: string }) => {
   const t = useTranslations("Header");
   return (
     <header
-      className={`object-contain grid grid-rows-3 p-10 h-screen bg-[length:100%_100%] bg-[linear-gradient(to_right_bottom,rgba(3,3,3,0.4),rgba(0,0,0,0.1)),url(/header.png)]`}
+      className={`grid grid-rows-3 p-10 h-screen bg-[url(/header.png)] bg-cover`}
     >
       <div className="grid grid-cols-3 h-fit text-white justify-items-stretch">
         <Avatar className="w-24 h-10">
@@ -83,17 +83,17 @@ function Impact({ organizationName }: { organizationName: string }) {
           <CardNumber
             number="160.400"
             label={`${t("waterSaved")}`}
-            className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/sea-turtle.png)]"
+            className="bg-[url(/sea-turtle.png)] bg-cover"
           />
           <CardNumber
             number="30.400"
             label={`${t("wasteSaved")}`}
-            className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/waste-paper.png)]"
+            className="bg-[url(/waste-paper.png)] bg-cover"
           />
           <CardNumber
             number="3.200"
             label={`${t("packagingSaved")}`}
-            className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/asset-save.png)]"
+            className="bg-[url(/asset-save.png)] bg-cover"
           />
           <ChevronRight className="text-white" />
         </div>
@@ -149,7 +149,7 @@ const AboutProject = ({
     <div>
       <div className="mx-40 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
       <div
-        className="mx-32 p-20 text-white rounded-xl bg-[linear-gradient(to_left,rgba(3,3,3,0.3),rgba(0,0,0,0.7)),url(/img.png)] bg-[length:100%_100%]"
+        className="mx-32 p-20 text-white rounded-xl bg-[linear-gradient(to_left,rgba(3,3,3,0.3),rgba(0,0,0,0.7)),url(/img.png)] bg-cover"
         id="about-project"
       >
         <p className="font-semibold text-xl">
@@ -255,15 +255,17 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header organizationLogo="logoTakami.png" />
-      <Impact organizationName="Takami" />
-      <AboutProject
-        organizationLogo="logoTakami.png"
-        organizationName="Takami"
-      />
-      <Partners />
-      <Footer organizationName="Takami" />
-    </main>
+      <main>
+        <Impact organizationName="Takami" />
+        <AboutProject
+          organizationLogo="logoTakami.png"
+          organizationName="Takami"
+        />
+        <Partners />
+        <Footer organizationName="Takami" />
+      </main>
+    </>
   );
 }
