@@ -1,5 +1,5 @@
-import * as React from "react";
 import { cn } from "@/lib/utils";
+import * as React from "react";
 import { Avatar, AvatarImage } from "./avatar";
 
 type CardTipProps = {
@@ -10,7 +10,7 @@ type CardTipProps = {
 const CardTip = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardTipProps
->(async ({ className, icon, label, ...props }, ref) => {
+>(async ({ className, icon, label, ...props }) => {
   return (
     <div
       className={cn(
@@ -22,9 +22,7 @@ const CardTip = React.forwardRef<
       <Avatar className="w-12 h-12">
         <AvatarImage src={`/${icon}`} />
       </Avatar>
-      <p className="ml-6">
-        {label}
-      </p>
+      <p className="ml-6">{label}</p>
     </div>
   );
 });

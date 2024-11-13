@@ -4,11 +4,11 @@ import { CardNumber } from "@/components/ui/card-number";
 import { CardPartner } from "@/components/ui/card-partner";
 import { CardTip } from "@/components/ui/card-tip";
 import { ChevronDown, ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-const Header = async ({ organizationLogo }: { organizationLogo: string }) => {
-  const t = await getTranslations("Header");
+const Header = ({ organizationLogo }: { organizationLogo: string }) => {
+  const t = useTranslations("Header");
   return (
     <header
       className={`object-contain grid grid-rows-3 p-10 h-screen bg-[length:100%_100%] bg-[linear-gradient(to_right_bottom,rgba(3,3,3,0.4),rgba(0,0,0,0.1)),url(/header.png)]`}
@@ -53,8 +53,8 @@ const Header = async ({ organizationLogo }: { organizationLogo: string }) => {
   );
 };
 
-async function Impact({ organizationName }: { organizationName: string }) {
-  const t = await getTranslations("Impact");
+function Impact({ organizationName }: { organizationName: string }) {
+  const t = useTranslations("Impact");
   return (
     <div className="p-20">
       <div className="grid" id="contribution-section">
@@ -135,16 +135,16 @@ async function Impact({ organizationName }: { organizationName: string }) {
       </div>
     </div>
   );
-};
+}
 
-const AboutProject = async ({
+const AboutProject = ({
   organizationName,
   organizationLogo,
 }: {
   organizationName: string;
   organizationLogo: string;
 }) => {
-  const t = await getTranslations("AboutProject");
+  const t = useTranslations("AboutProject");
   return (
     <div>
       <div className="mx-40 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
@@ -187,8 +187,8 @@ const AboutProject = async ({
   );
 };
 
-const Partners = async ({ partners }: { partners: [] }) => {
-  const t = await getTranslations("Partner");
+const Partners = () => {
+  const t = useTranslations("Partner");
   return (
     <div className="mx-32 mt-10 mb-40">
       <p className="text-lg">
@@ -213,9 +213,9 @@ const Partners = async ({ partners }: { partners: [] }) => {
   );
 };
 
-const Footer = async ({ organizationName }: { organizationName: string }) => {
-  const h = await getTranslations("Header");
-  const t = await getTranslations("AboutProject");
+const Footer = ({ organizationName }: { organizationName: string }) => {
+  const h = useTranslations("Header");
+  const t = useTranslations("AboutProject");
   return (
     <footer className="bg-black py-14 px-32">
       <div className="flex">
@@ -262,7 +262,7 @@ export default function Home() {
         organizationLogo="logoTakami.png"
         organizationName="Takami"
       />
-      <Partners partners={[]} />
+      <Partners />
       <Footer organizationName="Takami" />
     </main>
   );
