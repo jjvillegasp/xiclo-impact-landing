@@ -1,15 +1,15 @@
 import { CardPartner } from "@/components/ui/card-partner";
 import { getTranslations } from "next-intl/server";
 
-function renderPartner(partner: any) {
-  return <CardPartner logo={partner.logo} key={partner.name} />;
-}
-
-const Partners = async ({ partners }: { partners: [] }) => {
+const Partners = async ({
+  partners,
+}: {
+  partners: [{ logo: string; name: string }];
+}) => {
   const t = await getTranslations("Partner");
   if (partners.length > 0) {
     return (
-      <div className="margin-sc mb-40">
+      <div className="container mx-auto mb-40 p-8 md:p-0">
         <p className="text-lg">
           {t("nowReturn")} <span className="font-extrabold">{t("easier")}</span>
           <br /> <span className="font-extrabold">{t("moreEfficient")}</span>
@@ -22,8 +22,10 @@ const Partners = async ({ partners }: { partners: [] }) => {
         </p>
         <p className="mt-5 text-lg">{t("ordersReturnable")}</p>
         <br />
-        <div className={`grid grid-cols-4 gap-2`}>
-          {partners.map((partner) => renderPartner(partner))}
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-2`}>
+          {partners.map((partner) => (
+            <CardPartner logo={partner.logo} key={partner.name} />
+          ))}
         </div>
       </div>
     );

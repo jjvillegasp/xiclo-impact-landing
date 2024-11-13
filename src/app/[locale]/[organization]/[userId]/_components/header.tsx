@@ -1,12 +1,12 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
-  DialogHeader,
   Dialog,
   DialogContent,
+  DialogHeader,
+  DialogOverlay,
   DialogTitle,
   DialogTrigger,
-  DialogOverlay,
 } from "@/components/ui/dialog";
 import { constant } from "@/constants";
 import { cn } from "@/lib/utils";
@@ -18,18 +18,15 @@ import Link from "next/link";
 const Header = async ({
   organizationLogo,
   urlNewOrder,
-  className,
 }: {
   organizationLogo: string;
   urlNewOrder: string;
-  className: any;
 }) => {
   const t = await getTranslations("Header");
   return (
     <header
       className={cn(
-        `object-contain grid grid-rows-3 p-10 h-screen bg-[length:100%_100%]`,
-        className
+        `grid grid-rows-3 p-10 h-screen bg-cover bg-center bg-[url(/assets/images/header.png)]`
       )}
     >
       <div className="grid grid-cols-3 h-fit text-white justify-items-stretch">
@@ -77,7 +74,10 @@ const Header = async ({
           </DialogTrigger>
           <DialogOverlay>
             <DialogContent>
-              <YouTubeEmbed videoid={constant.video} style="display: contents" />
+              <YouTubeEmbed
+                videoid={constant.video}
+                style="display: contents"
+              />
             </DialogContent>
           </DialogOverlay>
         </Dialog>

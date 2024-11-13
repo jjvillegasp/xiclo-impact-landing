@@ -14,7 +14,7 @@ const CardTip = React.forwardRef<
   return (
     <div
       className={cn(
-        "flex items-center bg-[#F1F1F1] rounded-lg mb-2.5 p-2.5 text-left w-4/5 h-24",
+        "flex items-center bg-[#F1F1F1] rounded-lg p-2.5 text-left h-24",
         className
       )}
       {...props}

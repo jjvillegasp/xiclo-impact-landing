@@ -8,7 +8,10 @@ const CardPartner = React.forwardRef<
   return (
     <div
       {...props}
-      className={cn("text-center bg-cover text-white h-40", className)}
+      className={cn(
+        "text-center bg-center bg-cover text-white h-40",
+        className
+      )}
       style={{ backgroundImage: `url(${logo})` }}
     ></div>
   );

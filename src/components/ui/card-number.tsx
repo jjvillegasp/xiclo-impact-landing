@@ -15,7 +15,7 @@ const CardNumber = React.forwardRef<
     <div
       {...props}
       className={cn(
-        "text-center mr-5 rounded-xl bg-cover text-white h-60",
+        "text-center rounded-xl bg-cover text-white h-60 bg-center",
         className
       )}
     >

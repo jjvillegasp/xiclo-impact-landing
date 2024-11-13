@@ -1,6 +1,5 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
@@ -8,20 +7,20 @@ const AboutProject = async ({
   organizationName,
   organizationLogo,
   urlNewOrder,
-  className,
 }: {
   organizationName: string;
   organizationLogo: string;
   urlNewOrder: string;
-  className: any;
 }) => {
   const t = await getTranslations("AboutProject");
   return (
-    <div className="mb-20">
-      <div className="margin-sc-green bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
+    <div className="mb-20 container mx-auto">
+      <div className="ml-11 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
       <div
         id="about-project"
-        className={cn("margin-sc p-20 text-white rounded-xl", className)}
+        className={
+          "margin-sc p-20 text-white rounded-xl bg-[url(/assets/images/xiclo-food.png)] bg-cover"
+        }
       >
         <p className="font-semibold text-xl">
           {t("wasteFreeOrders")}
