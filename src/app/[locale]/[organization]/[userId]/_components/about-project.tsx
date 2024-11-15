@@ -1,6 +1,7 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import Link from "next/link";
 
 const AboutProject = async ({
@@ -18,9 +19,7 @@ const AboutProject = async ({
       <div className="ml-11 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
       <div
         id="about-project"
-        className={
-          "margin-sc p-20 text-white rounded-xl bg-[url(/assets/images/xiclo-food.png)] bg-cover"
-        }
+        className={"margin-sc p-20 text-white rounded-xl bg-impact bg-cover"}
       >
         <p className="font-semibold text-xl">
           {t("wasteFreeOrders")}
@@ -53,9 +52,12 @@ const AboutProject = async ({
           <Avatar className="w-24 h-10">
             <AvatarImage src={organizationLogo} />
           </Avatar>
-          <Avatar className="w-24 h-10">
-            <AvatarImage src="/assets/images/xiclo.png" />
-          </Avatar>
+          <Image
+            src="/assets/images/xiclo.png"
+            alt="Xiclo logo"
+            width={83}
+            height={25}
+          />
         </div>
       </div>
     </div>

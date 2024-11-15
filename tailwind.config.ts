@@ -13,6 +13,8 @@ const config: Config = {
       backgroundImage: {
         header:
           "linear-gradient(to top, rgba(3, 3, 3, 0.72), rgba(0, 0, 0, 0.22)), url(/assets/images/header.png)",
+        impact:
+          "linear-gradient(to right, rgba(3, 3, 3, 1), rgba(0, 0, 0, 0.03)), url(/assets/images/xiclo-food.png)",
       },
       colors: {
         background: "hsl(var(--background))",
