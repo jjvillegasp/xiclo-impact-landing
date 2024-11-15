@@ -10,6 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        header:
+          "linear-gradient(to top, rgba(3, 3, 3, 0.72), rgba(0, 0, 0, 0.22)), url(/assets/images/header.png)",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

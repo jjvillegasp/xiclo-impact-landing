@@ -26,7 +26,7 @@ const Header = async ({
   return (
     <header
       className={cn(
-        `grid grid-rows-3 p-10 h-screen bg-cover bg-center bg-[url(/assets/images/header.png)]`
+        `grid grid-rows-3 p-10 h-screen bg-cover bg-center bg-header `
       )}
     >
       <div className="grid grid-cols-3 h-fit text-white justify-items-stretch">
