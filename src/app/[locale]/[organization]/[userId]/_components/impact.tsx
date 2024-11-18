@@ -59,17 +59,17 @@ async function Impact({ data }: ImpactProps) {
             <CardNumber
               number={data.numberLt}
               label={`${t("waterSaved")}`}
-              className="bg-[url(/assets/images/sea-turtle.png)] bg-cover bg-center"
+              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/sea-turtle.png)] bg-cover bg-center"
             />
             <CardNumber
               number={data.numberKg}
               label={`${t("wasteSaved")}`}
-              className="bg-[url(/assets/images/waste-paper.png)] bg-cover bg-center"
+              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/waste-paper.png)] bg-cover bg-center"
             />
             <CardNumber
               number={data.numberAssets}
               label={`${t("packagingSaved")}`}
-              className="bg-[url(/assets/images/asset-save.png)] bg-cover bg-center"
+              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/asset-save.png)] bg-cover bg-center"
             />
           </div>
         </div>
