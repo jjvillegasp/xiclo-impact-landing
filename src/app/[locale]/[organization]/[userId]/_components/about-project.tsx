@@ -53,7 +53,7 @@ const AboutProject = async ({
             <AvatarImage src={organizationLogo} />
           </Avatar>
           <Image
-            src="/assets/images/xiclo.png"
+            src="/assets/images/xiclo.svg"
             alt="Xiclo logo"
             width={83}
             height={25}

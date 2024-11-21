@@ -14,7 +14,7 @@ const Footer = async ({ organizationName }: { organizationName: string }) => {
         <div className="flex-1">
           <Image
             alt="Xiclo powered by logo"
-            src="/assets/images/xiclo-powered.png"
+            src="/assets/images/xiclo-powered.svg"
             width={302}
             height={142}
           />
