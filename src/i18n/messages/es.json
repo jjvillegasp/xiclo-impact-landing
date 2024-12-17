@@ -24,12 +24,13 @@
     "care": "cuidado",
     "designAssets": "Los empaques Xiclo están diseñados para el transporte seguro y limpio de alimentos.",
     "washingProcess": "Una vez retornados son sometidos a un proceso industrial de lavado y control antes de volver al restaurante.",
-    "remember": "Recuerde:",
+    "remember": "Recuerde: ",
     "careAssets": "entre más los cuidemos, más xiclos podrán cumplir y más eficiente será nuestro aporte al planeta.",
-    "startedAt": "Fecha de Inicio:",
+    "startedAt": "Activo desde:",
     "ranking": "Ranking",
     "top": "Top ",
-    "usersFootprint": "de usuarios con mejor huella."
+    "usersFootprint": "  de usuarios con mejor huella.",
+    "carbonFootprintSave": "Ahorro Huella Carbono"
   },
   "AboutProject": {
     "wasteFreeOrders": "Pedidos sin residuos,",
@@ -38,7 +39,9 @@
     "joinXiclo": "se une a Xiclo, el sistema que está revolucionando la logística de empaques retornables, con una misión poderosa: ¡decirle adiós a la basura en nuestras tiendas!",
     "enjoyDishes": "Disfrute de sus platos favoritos en empaques que mejoran la experiencia y aportan en la construcción de un futuro mucho más sostenible.",
     "placeNewOrder": "Haz un nuevo pedido",
-    "downloadXiclo": "Descargar Xiclo"
+    "downloadXiclo": "Descargar Xiclo",
+    "rightsReserved": "© Derechos Reservados. ",
+    "siteByE": "Site by E"
   },
   "Partner": {
     "nowReturn": "Ahora retornar es",

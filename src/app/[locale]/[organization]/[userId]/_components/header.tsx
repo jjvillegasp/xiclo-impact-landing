@@ -1,4 +1,3 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -14,6 +13,7 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import { Play } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import MenuHeader from "./menu-header";
 
 const Header = async ({
   organizationLogo,
@@ -26,48 +26,30 @@ const Header = async ({
   return (
     <header
       className={cn(
-        `grid grid-rows-3 p-10 h-screen bg-cover bg-center bg-header `
+        `grid grid-rows-3 h-screen bg-cover bg-center bg-header `
       )}
     >
-      <div className="grid grid-cols-3 h-fit text-white justify-items-stretch">
-        <Avatar className="w-28 h-10">
-          <AvatarImage src={organizationLogo} />
-        </Avatar>
-        <div className="flex justify-center gap-8">
-          <Button
-            variant="link"
-            className="text-white font-semibold hover:underline decoration-white"
-          >
-            <Link href="#contribution-section">{t("impact")}</Link>
-          </Button>
-          <Button
-            variant="link"
-            className="text-white font-semibold hover:underline decoration-white"
-          >
-            <Link href="#about-project">{t("aboutProject")}</Link>
-          </Button>
-        </div>
-        <Link
-          className="w-fit items-center justify-self-end"
-          href={urlNewOrder}
-        >
-          <Button className="bg-white text-black">{t("newOrder")}</Button>
-        </Link>
-      </div>
-      <div className="justify-items-center text-center text-white">
+      <MenuHeader
+        organizationLogo={organizationLogo}
+        urlNewOrder={urlNewOrder}
+        lbImpact={t('impact')}
+        lbAboutProject={t('aboutProject')}
+        lbNewOrder={t('newOrder')}
+      />
+      <div className="justify-items-center text-center text-white my-48 mx-5">
         <span className="text-6xl">{t("yourOrdersGo")}</span>
         <br />
-        <span className="text-7xl font-extrabold">{t("packagesComeBack")}</span>
+        <span className="text-6xl font-extrabold">{t("packagesComeBack")}</span>
         <br />
-        <p className="mt-8 font-bold">{t("discoverImpact")}</p>
+        <p className="mt-8 font-bold text-lg">{t("discoverImpact")}</p>
       </div>
-      <div className="justify-items-center text-center text-white self-end mb-3">
+      <div className="justify-items-center text-center text-white self-end absolute mb-20 w-full">
         <Dialog>
           <DialogHeader>
             <DialogTitle />
           </DialogHeader>
           <DialogTrigger asChild>
-            <Button className="bg-black size-icon text-white">
+            <Button className="bg-black size-icon text-white mt-1">
               <Play className="fill-white h-3" />
               {t("viewVideo")}
             </Button>
@@ -82,7 +64,9 @@ const Header = async ({
           </DialogOverlay>
         </Dialog>
         <Link href="#contribution-section">
-          <Button className="bg-black ml-2 size-sm">{t("viewImpact")}</Button>
+          <Button className="bg-black ml-2 size-sm mt-1">
+            {t("viewImpact")}
+          </Button>
         </Link>
       </div>
     </header>

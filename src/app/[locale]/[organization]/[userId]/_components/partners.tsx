@@ -9,7 +9,7 @@ const Partners = async ({
   const t = await getTranslations("Partner");
   if (partners.length > 0) {
     return (
-      <div className="container mx-auto mb-40 p-8 md:p-0">
+      <div className="container mx-auto mb-40 p-8 md:p-0 partner-margin">
         <p className="text-lg">
           {t("nowReturn")} <span className="font-extrabold">{t("easier")}</span>
           <br /> <span className="font-extrabold">{t("moreEfficient")}</span>

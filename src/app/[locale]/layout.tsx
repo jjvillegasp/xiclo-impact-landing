@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   description: "Xiclo landing",
 };
 
+import { Wix_Madefor_Display } from 'next/font/google';
+
+const font = Wix_Madefor_Display({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-wix-madefor-display-wght',
+  display: 'swap',
+});
+
 export default async function LocaleLayout({
   children,
   params,
@@ -36,8 +45,8 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased w-full",
-          inter.className
+          "min-h-screen bg-background font-wixMadefor antialiased w-full max-w-full",
+          font.variable
         )}
       >
         <NextIntlClientProvider messages={messages}>

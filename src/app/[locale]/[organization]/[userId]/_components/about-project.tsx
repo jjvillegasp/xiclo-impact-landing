@@ -15,11 +15,11 @@ const AboutProject = async ({
 }) => {
   const t = await getTranslations("AboutProject");
   return (
-    <div className="mb-20 container mx-auto">
-      <div className="ml-11 bg-[#97C355] w-96 h-6 rounded-t-lg"></div>
+    <div className="container mx-auto w-screen h-screen bg-cover mx-auto">
+      <div className="ml-11 bg-[#97C355] w-1/2 h-6 rounded-t-lg"></div>
       <div
         id="about-project"
-        className={"margin-sc p-20 text-white rounded-xl bg-impact bg-cover"}
+        className={"margin-sc p-7 text-white rounded-xl bg-impact bg-cover"}
       >
         <p className="font-semibold text-xl">
           {t("wasteFreeOrders")}
@@ -31,14 +31,14 @@ const AboutProject = async ({
           {organizationName} <br /> {t("moreXiclo")}
         </p>
         <br />
-        <div className="text-lg w-[500px] text-left">
+        <div className="text-lg text-left">
           <p>
             {organizationName} {t("joinXiclo")}
           </p>
           <br />
           <p>{t("enjoyDishes")}</p>
         </div>
-        <div className="flex items-center mt-20 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center mt-20 gap-12 customer-center">
           <div className="flex-1 justify-center">
             <Link
               className="w-fit items-center justify-self-end"
@@ -49,15 +49,17 @@ const AboutProject = async ({
               </Button>
             </Link>
           </div>
-          <Avatar className="w-24 h-10">
-            <AvatarImage src={organizationLogo} />
-          </Avatar>
-          <Image
-            src="/assets/images/xiclo.svg"
-            alt="Xiclo logo"
-            width={83}
-            height={25}
-          />
+          <div className="flex about-center">
+            <Avatar className="w-24 h-10 mr-5">
+              <AvatarImage src={organizationLogo} />
+            </Avatar>
+            <Image
+              src="/assets/images/xiclo.svg"
+              alt="Xiclo logo"
+              width={83}
+              height={25}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -26,36 +26,36 @@ async function Impact({ data }: ImpactProps) {
   const t = await getTranslations("Impact");
 
   return (
-    <div id="contribution-section" className="container py-20 mx-auto">
-      <div className="grid">
+    <div id="contribution-section" className="container py-20 mx-auto custom-center">
+      <div className="grid impact-center">
         <div className="flex flex-col items-center justify-center mb-10">
-          <p className="text-5xl font-bold mt-100">
+          <p className="text-4xl font-bold mt-100 text-center">
             {t("contributionNumbers")}
           </p>
-          <p>{t("currentData")}</p>
+          <p className="text-xs">{t("currentData")}</p>
         </div>
         <div className="bg-white p-10 rounded-lg">
-          <div className="grid grid-cols-1 md:grid-cols-3 text-black h-auto items-center gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 text-black h-auto items-center gap-4 mb-4 text-sm">
             <div>
-              <p className="mt-100 flex-1 text-3xl font-bold">{data.user}</p>
-              <p>
+              <p className="mt-100 flex-1 text-xl font-bold">{data.user}</p>
+              <p className="text-[#B8B8B8]">
                 {t("startedAt")} <span className="font-bold">{formatDate}</span>
               </p>
             </div>
             <span></span>
             <div>
-              <p className="mt-100">
+              <p className="mt-100 text-[#B8B8B8]">
                 {t("ranking")} {data.organization.name}:
               </p>
               <p>
-                <span className="text-3xl font-bold">
+                <span className="text-1xl font-bold">
                   {t("top")} {data.top}
-                </span>{" "}
+                </span>
                 {t("usersFootprint")}
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-4">
             <CardNumber
               number={data.numberLt}
               label={`${t("waterSaved")}`}
@@ -71,13 +71,18 @@ async function Impact({ data }: ImpactProps) {
               label={`${t("packagingSaved")}`}
               className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/asset-save.png)] bg-cover bg-center"
             />
+            <CardNumber
+              number={data.numberAssets}
+              label={`${t("carbonFootprintSave")}`}
+              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/pexels.png)] bg-cover bg-center"
+            />
           </div>
         </div>
         <div className="flex items-center justify-center h-20">
           <ChevronDown color="#97C355" />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center impact-card">
         <div className="flex flex-col gap-4">
           <CardTip icon="assets/images/laundry.png" label={t("tipOne")} />
           <CardTip icon="assets/images/soap.png" label={t("tipTwo")} />
@@ -92,7 +97,7 @@ async function Impact({ data }: ImpactProps) {
             <p className="font-extrabold text-4xl text-left flex-1">
               {t("tipsOf")} <br /> {t("care")}
             </p>
-            <Avatar className="w-24 h-16 gap-4">
+            <Avatar className="w-24 h-16 gap-4 static">
               <AvatarImage src="/assets/images/assets.png" />
             </Avatar>
           </div>

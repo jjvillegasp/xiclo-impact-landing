@@ -24,12 +24,13 @@
     "care": "tips",
     "designAssets": "Xiclo packaging is designed for safe and clean food transportation.",
     "washingProcess": "Once returned, they are subjected to an industrial washing and control process before being returned to the restaurant.",
-    "remember": "Remember:",
+    "remember": "Remember: ",
     "careAssets": "the more we take care of them, the more xiclos will be able to fulfill and the more efficient our contribution to the planet will be.",
-    "startedAt": "Start Date:",
+    "startedAt": "Active since:",
     "ranking": "Ranking",
     "top": "Top ",
-    "usersFootprint": "of users with a better footprint."
+    "usersFootprint": "  of users with a better footprint.",
+    "carbonFootprintSave": "Carbon Footprint Savings"
   },
   "AboutProject": {
     "wasteFreeOrders": "Waste-free orders,",
@@ -38,7 +39,9 @@
     "joinXiclo": "joins Xiclo, the system that is revolutionizing returnable packaging logistics, with a powerful mission: to say goodbye to waste in our stores!",
     "enjoyDishes": "Enjoy your favorite dishes in packaging that enhances the experience and contributes to building a more sustainable future.",
     "placeNewOrder": "Place a new order",
-    "downloadXiclo": "Download Xiclo"
+    "downloadXiclo": "Download Xiclo",
+    "rightsReserved": "© Rights reserved. ",
+    "siteByE": "Site by E"
   },
   "Partner": {
     "nowReturn": "Now return is",
