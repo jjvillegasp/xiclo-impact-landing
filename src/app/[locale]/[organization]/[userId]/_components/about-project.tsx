@@ -22,7 +22,7 @@ const AboutProject = async ({
         className={"margin-sc p-7 text-white rounded-xl bg-impact bg-cover"}
       >
         <p className="font-semibold text-xl">
-          {t("wasteFreeOrders")},
+          {t("wasteFreeOrders")}
           <br />
           {t("flavorWithoutLimits")}
         </p>
