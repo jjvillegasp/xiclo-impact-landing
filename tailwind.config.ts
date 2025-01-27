@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1200px',
+      },
       backgroundImage: {
         header:
           "linear-gradient(to top, rgba(3, 3, 3, 0.72), rgba(0, 0, 0, 0.22)), url(/assets/images/header.png)",
@@ -62,6 +68,9 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        wixMadefor: 'var(--font-wix-madefor-display-wght)',
       },
     },
   },

@@ -60,4 +60,69 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  body {
+    @media only screen and (max-device-width: 768px) {
+      .text-6xl {
+        font-size: 1.813em;
+      }
+
+      .impact-center {
+        text-align: center;
+      }
+
+      .impact-card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-inline: 20px;
+      }
+
+      .text-xl {
+        font-size: 0.813em;
+      }
+
+      .text-8xl {
+        font-size: 2.75em;
+        line-height: 51px;
+      }
+
+      .text-lg {
+        font-size: 0.875em;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .customer-center {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+      }
+
+      .about-center {
+        justify-content: center;
+      }
+
+      .px-36 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      .ml-6 {
+        font-size: 14px;
+      }
+
+      .partner-margin {
+        margin-top: 5rem;
+      }
+    }
+
+    @media only screen and (width > 768px) {
+      .about-center {
+        justify-content: flex-end;
+      }
+    }
+  }
 }
