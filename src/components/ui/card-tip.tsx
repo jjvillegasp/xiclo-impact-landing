@@ -10,19 +10,20 @@ type CardTipProps = {
 const CardTip = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardTipProps
->(async ({ className, icon, label, ...props }) => {
+>(async ({ className, icon, label, ...props }, ref) => {
   return (
     <div
+      ref={ref}
       className={cn(
-        "flex items-center bg-[#F1F1F1] rounded-lg p-2.5 text-left h-24",
+        "flex items-center bg-[#F1F1F1] rounded-lg p-2.5 text-left h-16",
         className
       )}
       {...props}
     >
-      <Avatar className="w-12 h-12">
+      <Avatar className="w-10 h-10">
         <AvatarImage src={`/${icon}`} />
       </Avatar>
-      <p className="ml-6">{label}</p>
+      <p className="ml-6 text-lg">{label}</p>
     </div>
   );
 });

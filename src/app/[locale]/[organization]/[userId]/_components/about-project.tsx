@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const AboutProject = async ({
   organizationName,
-  organizationLogo,
   urlNewOrder,
 }: {
   organizationName: string;
@@ -15,16 +14,14 @@ const AboutProject = async ({
 }) => {
   const t = await getTranslations("AboutProject");
   return (
-    <div className="container mx-auto w-screen h-screen bg-cover mx-auto">
+    <div className="container mx-auto w-screen max-h-screen bg-cover my-10 h-fit">
       <div className="ml-11 bg-[#97C355] w-1/2 h-6 rounded-t-lg"></div>
       <div
         id="about-project"
         className={"margin-sc p-7 text-white rounded-xl bg-impact bg-cover"}
       >
         <p className="font-semibold text-xl">
-          {t("wasteFreeOrders")}
-          <br />
-          {t("flavorWithoutLimits")}
+          {t("goodbyePacking")}
         </p>
         <br />
         <p className="font-extrabold text-8xl">
@@ -33,7 +30,7 @@ const AboutProject = async ({
         <br />
         <div className="text-lg text-left">
           <p>
-            {organizationName} {t("joinXiclo")}
+            {t("joinXiclo")}
           </p>
           <br />
           <p>{t("enjoyDishes")}</p>
@@ -48,17 +45,6 @@ const AboutProject = async ({
                 {t("placeNewOrder")}
               </Button>
             </Link>
-          </div>
-          <div className="flex about-center">
-            <Avatar className="w-24 h-10 mr-5">
-              <AvatarImage src={organizationLogo} />
-            </Avatar>
-            <Image
-              src="/assets/images/xiclo.svg"
-              alt="Xiclo logo"
-              width={83}
-              height={25}
-            />
           </div>
         </div>
       </div>
