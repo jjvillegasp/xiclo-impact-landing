@@ -9,18 +9,19 @@ type CardNumberProps = {
 const CardNumber = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardNumberProps
->(async ({ className, number, label, ...props }) => {
+>(({ className, number, label, ...props }, ref) => {
   const format = new Intl.NumberFormat("es-CO");
   return (
     <div
+      ref={ref}
       {...props}
       className={cn(
-        "text-center rounded-xl bg-cover text-white h-60 bg-center grayscale hover:grayscale-0",
+        "text-center rounded-xl bg-cover text-white h-60 bg-center grayscale hover:grayscale-0 content-center",
         className
       )}
     >
       <p className="font-extrabold text-6xl mt-3">{format.format(number)}</p>
-      <p>{label}</p>
+      <p className="text-lg">{label}</p>
     </div>
   );
 });

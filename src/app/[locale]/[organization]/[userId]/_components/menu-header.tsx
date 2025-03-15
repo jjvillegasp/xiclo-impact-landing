@@ -50,13 +50,13 @@ const MenuHeader = ({
       <div className="flex justify-center gap-8 menu">
         <Button
           variant="link"
-          className="text-white font-semibold hover:underline decoration-white text-xs"
+          className="text-white font-semibold hover:underline decoration-white text-lg"
         >
           <Link href="#contribution-section">{lbImpact}</Link>
         </Button>
         <Button
           variant="link"
-          className="text-white font-semibold hover:underline decoration-white text-xs"
+          className="text-white font-semibold hover:underline decoration-white text-lg"
         >
           <Link href="#about-project">{lbAboutProject}</Link>
         </Button>
@@ -65,7 +65,7 @@ const MenuHeader = ({
         className="w-fit items-center justify-self-end"
         href={urlNewOrder}
       >
-        <Button className="bg-white text-black">{lbNewOrder}</Button>
+        <Button className="bg-white text-black text-base">{lbNewOrder}</Button>
       </Link>
     </div>
   );

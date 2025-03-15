@@ -17,55 +17,63 @@ import MenuHeader from "./menu-header";
 
 const Header = async ({
   organizationLogo,
+  organizationVideo,
   urlNewOrder,
 }: {
   organizationLogo: string;
+  organizationVideo: string;
   urlNewOrder: string;
 }) => {
   const t = await getTranslations("Header");
   return (
     <header
-      className={cn(
-        `grid grid-rows-3 h-screen bg-cover bg-center bg-header `
-      )}
+      className={cn(`grid grid-rows-3 h-screen bg-cover bg-center bg-header `)}
     >
       <MenuHeader
         organizationLogo={organizationLogo}
         urlNewOrder={urlNewOrder}
-        lbImpact={t('impact')}
-        lbAboutProject={t('aboutProject')}
-        lbNewOrder={t('newOrder')}
+        lbImpact={t("impact")}
+        lbAboutProject={t("aboutProject")}
+        lbNewOrder={t("newOrder")}
       />
-      <div className="justify-items-center text-center text-white my-48 mx-5">
-        <span className="text-6xl">{t("yourOrdersGo")}</span>
+      <div className="justify-items-center text-center text-white my-48 mx-2">
+        <span className="text-8xl">{t("yourOrdersGo")}</span>
         <br />
-        <span className="text-6xl font-extrabold">{t("packagesComeBack")}</span>
+        <span className="text-8xl font-extrabold">{t("packagesComeBack")}</span>
         <br />
-        <p className="mt-8 font-bold text-lg">{t("discoverImpact")}</p>
+        <p className="mt-8 font-bold text-2xl">{t("discoverImpact")}</p>
       </div>
-      <div className="justify-items-center text-center text-white self-end absolute mb-20 w-full">
-        <Dialog>
-          <DialogHeader>
-            <DialogTitle />
-          </DialogHeader>
-          <DialogTrigger asChild>
-            <Button className="bg-black size-icon text-white mt-1">
-              <Play className="fill-white h-3" />
-              {t("viewVideo")}
-            </Button>
-          </DialogTrigger>
-          <DialogOverlay>
-            <DialogContent>
-              <YouTubeEmbed
-                videoid={constant.video}
-                style="display: contents"
-              />
-            </DialogContent>
-          </DialogOverlay>
-        </Dialog>
+      <div className="justify-items-center text-center text-white self-end absolute my-10 w-full">
+        <span className={organizationVideo ? '': 'hidden'}>
+          <Dialog>
+            <DialogHeader>
+              <DialogTitle />
+            </DialogHeader>
+            <DialogTrigger asChild>
+              <Button className="bg-black size-sm text-white mt-1 text-base w-2xs">
+                <Play className="fill-white mr-2" size={"15"} />
+                {t("viewVideo")}
+                <Play
+                  className="invisible w-1 pointer-events-none"
+                  size={"15"}
+                />
+              </Button>
+            </DialogTrigger>
+            <DialogOverlay>
+              <DialogContent>
+                <YouTubeEmbed
+                  videoid={organizationVideo}
+                  style="display: contents"
+                />
+              </DialogContent>
+            </DialogOverlay>
+          </Dialog>
+        </span>
         <Link href="#contribution-section">
-          <Button className="bg-black ml-2 size-sm mt-1">
+          <Button className="bg-black ml-2 size-sm mt-1 text-base w-2xs">
+            <Play className="invisible w-1 pointer-events-none" size={"15"} />
             {t("viewImpact")}
+            <Play className="invisible w-1 pointer-events-none" size={"15"} />
           </Button>
         </Link>
       </div>
