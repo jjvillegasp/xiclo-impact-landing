@@ -7,7 +7,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { constant } from "@/constants";
 import { cn } from "@/lib/utils";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { Play } from "lucide-react";
@@ -44,7 +43,7 @@ const Header = async ({
         <p className="mt-8 font-bold text-2xl">{t("discoverImpact")}</p>
       </div>
       <div className="justify-items-center text-center text-white self-end absolute my-10 w-full">
-        <span className={organizationVideo ? '': 'hidden'}>
+        <span className={organizationVideo ? "" : "hidden"}>
           <Dialog>
             <DialogHeader>
               <DialogTitle />

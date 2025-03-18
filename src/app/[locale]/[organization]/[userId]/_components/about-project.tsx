@@ -1,7 +1,5 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 import Link from "next/link";
 
 const AboutProject = async ({
@@ -20,18 +18,14 @@ const AboutProject = async ({
         id="about-project"
         className={"margin-sc p-7 text-white rounded-xl bg-impact bg-cover"}
       >
-        <p className="font-semibold text-xl">
-          {t("goodbyePacking")}
-        </p>
+        <p className="font-semibold text-xl">{t("goodbyePacking")}</p>
         <br />
         <p className="font-extrabold text-8xl">
           {organizationName} <br /> {t("moreXiclo")}
         </p>
         <br />
         <div className="text-lg text-left">
-          <p>
-            {t("joinXiclo")}
-          </p>
+          <p>{t("joinXiclo")}</p>
           <br />
           <p>{t("enjoyDishes")}</p>
         </div>
