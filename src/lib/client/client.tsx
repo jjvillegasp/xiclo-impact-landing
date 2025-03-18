@@ -8,15 +8,24 @@ export async function getInfoLandingByUser(
     organization: { name: "", logo: "", orderUrl: "" },
     partners: [],
     started_at: new Date(),
-    numberLt: 0,
-    numberKg: 0,
-    numberAssets: 0,
+    contributionOrganization: {
+      numberLt: 0,
+      numberKg: 0,
+      numberAssets: 0,
+      numberCarbon: 0,
+    },
+    contributionUser: {
+      numberLt: 0,
+      numberKg: 0,
+      numberAssets: 0,
+      numberCarbon: 0,
+    },
     top: 0,
   };
   try {
     const apiKey = process.env[`${organization.toUpperCase()}_API_KEY`];
-    const url = `${process.env.XICLO_API_URL}/users/landing/${userId}`;
-
+    const url = `${process.env.XICLO_API_URL}/users/landing?user_reference=${userId}`;
+    
     const res = await fetch(url, {
       headers: {
         "X-Api-Key": `${apiKey}`,
@@ -25,7 +34,6 @@ export async function getInfoLandingByUser(
 
     const data = await res.json();
 
-    console.log("data", data);
     if (data.statusCode && data.statusCode != 200) {
       return dataInit;
     }
