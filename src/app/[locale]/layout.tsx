@@ -3,23 +3,21 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Inter } from "next/font/google";
-import { notFound } from "next/navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Xiclo",
   description: "Xiclo landing",
 };
 
-import { Wix_Madefor_Display } from 'next/font/google';
+import { Wix_Madefor_Display } from "next/font/google";
 
 const font = Wix_Madefor_Display({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-wix-madefor-display-wght',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-wix-madefor-display-wght",
+  display: "swap",
 });
 
 export default async function LocaleLayout({
