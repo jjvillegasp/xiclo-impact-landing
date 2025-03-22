@@ -10,7 +10,7 @@ type CardTipProps = {
 const CardTip = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardTipProps
->(async ({ className, icon, label, ...props }, ref) => {
+>(({ className, icon, label, ...props }, ref) => {
   return (
     <div
       ref={ref}

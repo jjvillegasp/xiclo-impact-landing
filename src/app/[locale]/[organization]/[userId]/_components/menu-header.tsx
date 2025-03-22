@@ -4,6 +4,7 @@ import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useBrowserDetection } from "@/hooks/use-browser-detection";
 
 const MenuHeader = ({
   organizationLogo,
@@ -19,6 +20,9 @@ const MenuHeader = ({
   lbNewOrder: string;
 }) => {
   const [bgColor, setBgColor] = useState("");
+  const { isSafari, isSmallScreen } = useBrowserDetection();
+  const display = isSafari && isSmallScreen ? "hidden" : "";
+  const grid = isSafari ? (isSmallScreen ? "grid-cols-2" : " grid-cols-3") : " grid-cols-2";
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
@@ -40,14 +44,15 @@ const MenuHeader = ({
   return (
     <div
       className={cn(
-        `grid grid-cols-2 md:grid-cols-3 h-fit text-white justify-items-stretch fixed w-full p-5 ` +
-          bgColor
+        `grid md:grid-cols-3 h-20 text-white justify-items-stretch fixed w-full p-5 `,
+        bgColor,
+        grid
       )}
     >
       <Avatar className="w-28 h-10">
         <AvatarImage src={organizationLogo} />
       </Avatar>
-      <div className="flex justify-center gap-8 menu">
+      <div className={cn("flex justify-center gap-8 menu ", display)}>
         <Button
           variant="link"
           className="text-white font-semibold hover:underline decoration-white text-lg"
@@ -61,10 +66,7 @@ const MenuHeader = ({
           <Link href="#about-project">{lbAboutProject}</Link>
         </Button>
       </div>
-      <Link
-        className="w-fit items-center justify-self-end"
-        href={urlNewOrder}
-      >
+      <Link className="w-fit items-center justify-self-end" href={urlNewOrder}>
         <Button className="bg-white text-black text-base">{lbNewOrder}</Button>
       </Link>
     </div>

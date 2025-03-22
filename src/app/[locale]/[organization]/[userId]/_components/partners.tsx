@@ -1,15 +1,26 @@
-import { CardPartner } from "@/components/ui/card-partner";
-import { getTranslations } from "next-intl/server";
+"use client";
 
-const Partners = async ({
+import { CardPartner } from "@/components/ui/card-partner";
+import { useTranslations } from "next-intl";
+import { useBrowserDetection } from "@/hooks/use-browser-detection";
+import { cn } from "@/lib/utils";
+
+const Partners = ({
   partners,
 }: {
-  partners: [{ logo: string; name: string, website: string }];
+  partners: [{ logo: string; name: string; website: string }];
 }) => {
-  const t = await getTranslations("Partner");
+  const { isSafari, isSmallScreen } = useBrowserDetection();
+  const t = useTranslations("Partner");
+  const gridPartners = isSafari
+    ? isSmallScreen
+      ? "grid-cols-2"
+      : "grid-cols-4"
+    : "grid-cols-2";
+
   if (partners.length > 0) {
     return (
-      <div className="container mx-auto p-8 md:p-0 partner-margin">
+      <div className={cn(`container mx-auto p-8 md:p-0 partner-margin `)}>
         <p className="text-2xl">
           {t("nowReturn")} <span className="font-extrabold">{t("easier")}</span>
           <span className="font-extrabold">{t("moreEfficient")}</span>
@@ -22,9 +33,13 @@ const Partners = async ({
         </p>
         <p className="mt-5 text-2xl">{t("ordersReturnable")}</p>
         <br />
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-2`}>
+        <div className={cn(`grid md:grid-cols-4 gap-2 `, gridPartners)}>
           {partners.map((partner) => (
-            <CardPartner logo={partner.logo} key={partner.name} website={partner.website} />
+            <CardPartner
+              logo={partner.logo}
+              key={partner.name}
+              website={partner.website}
+            />
           ))}
         </div>
       </div>
