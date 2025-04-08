@@ -8,12 +8,12 @@
  * @returns boolean indicating if the browser is Safari
  */
 export const isSafari = (): boolean => {
-    if (typeof navigator === "undefined") return false;
+  if (typeof navigator === "undefined") return false;
 
-    return (
-        /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||
-        /iPad|iPhone|iPod/.test(navigator.userAgent)
-    );
+  return (
+    /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||
+    /iPad|iPhone|iPod/.test(navigator.userAgent)
+  );
 };
 
 /**
@@ -21,11 +21,8 @@ export const isSafari = (): boolean => {
  * @returns boolean indicating if the device is iOS
  */
 export const isIOS = (): boolean => {
-    if (typeof navigator === "undefined") return false;
-
-    return (
-        /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
-    );
+  if (typeof navigator === "undefined") return false;
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 };
 
 /**
@@ -33,11 +30,9 @@ export const isIOS = (): boolean => {
  * @returns boolean indicating if the device is mobile
  */
 export const isMobile = (): boolean => {
-    if (typeof navigator === "undefined") return false;
+  if (typeof navigator === "undefined") return false;
 
-    return (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-        )
-    );
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 };
