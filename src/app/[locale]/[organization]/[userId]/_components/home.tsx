@@ -17,11 +17,11 @@ const Home = async ({
   const toTitleCase = (phrase: string) => {
     return phrase
       .toLowerCase()
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   };
-  
+
   return (
     <>
       <title className="capitalize">{`${toTitleCase(
@@ -33,14 +33,16 @@ const Home = async ({
           organizationVideo={data.organization.video}
           urlNewOrder={data.organization.orderUrl}
         />
-        <AboutProject
-          organizationLogo={data.organization.logo}
-          organizationName={data.organization.name}
-          urlNewOrder={data.organization.orderUrl}
-        />
-        <Impact data={data} />
-        <Partners partners={data.partners} />
-        <CareTips />
+        <div className="mx-10">
+          <AboutProject
+            organizationLogo={data.organization.logo}
+            organizationName={data.organization.name}
+            urlNewOrder={data.organization.orderUrl}
+          />
+          <Impact data={data} />
+          <Partners partners={data.partners} />
+          <CareTips />
+        </div>
         <Footer organizationName={data.organization.name} />
       </main>
     </>
