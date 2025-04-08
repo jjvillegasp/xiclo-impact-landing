@@ -5,7 +5,7 @@ import * as React from "react";
 const CardPartner = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { logo: string; website: string }
->(async ({ className, logo, website, ...props }, ref) => {
+>(({ className, logo, website, ...props }, ref) => {
   return (
     <Link href={website}>
       <div

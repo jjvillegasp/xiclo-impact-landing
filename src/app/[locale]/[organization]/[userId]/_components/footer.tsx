@@ -1,17 +1,32 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { constant } from "@/constants";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { useBrowserDetection } from "@/hooks/use-browser-detection";
+import { cn } from "@/lib/utils";
 
-const Footer = async ({ organizationName }: { organizationName: string }) => {
-  const h = await getTranslations("Header");
-  const t = await getTranslations("Footer");
+const Footer = ({ organizationName }: { organizationName: string }) => {
+  const h = useTranslations("Header");
+  const t = useTranslations("Footer");
+  const { isSafari, isSmallScreen } = useBrowserDetection();
+  const gridFooter = isSafari
+    ? isSmallScreen
+      ? "grid-cols-1"
+      : "grid-cols-2"
+    : "grid-cols-1";
+
+  const center =
+    isSafari && isSmallScreen
+      ? "text-center justify-center justify-items-center"
+      : "";
 
   return (
     <footer className="bg-black py-14 px-36">
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="customer-center">
+      <div className={cn(`grid md:grid-cols-2 `, gridFooter)}>
+        <div className={cn(`customer-center `)}>
           <Image
             alt="Xiclo powered by logo"
             src="/assets/images/xiclo-powered.svg"
@@ -25,12 +40,15 @@ const Footer = async ({ organizationName }: { organizationName: string }) => {
           </Link>
         </div>
         <div className="text-white text-lg">
-          <p>
-            {t("alliance", {organization: organizationName})}
-          </p>
+          <p>{t("alliance", { organization: organizationName })}</p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 customer-center">
+      <div
+        className={cn(
+          `grid md:grid-cols-2 gap-4 mt-10 customer-center `,
+          gridFooter
+        )}
+      >
         <div>
           <Button
             variant="link"
@@ -45,8 +63,10 @@ const Footer = async ({ organizationName }: { organizationName: string }) => {
             <Link href="#about-project">{h("aboutProject")}</Link>
           </Button>
         </div>
-        <div className="text-white text-sm text-end customer-center">
-          <p>{`${t("rightsReserved")} ${organizationName} ${new Date().getFullYear()}`}</p>
+        <div className={cn(`text-white text-sm text-end customer-center `, center)}>
+          <p>{`${t(
+            "rightsReserved"
+          )} ${organizationName} ${new Date().getFullYear()}`}</p>
           <p>{t("siteByE")}</p>
         </div>
       </div>
