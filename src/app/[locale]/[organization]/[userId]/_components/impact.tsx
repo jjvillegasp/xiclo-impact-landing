@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useBrowserDetection } from "@/hooks/use-browser-detection";
 
 type ImpactProps = {
   data: {
@@ -14,16 +15,16 @@ type ImpactProps = {
     organization: { name: string };
     top: number;
     contributionOrganization: {
-      numberLt: number;
-      numberKg: number;
+      numberWaterUsageLt: number;
+      numberLandfillKg: number;
       numberAssets: number;
-      numberCarbon: number;
+      numberCarbonKg: number;
     };
     contributionUser: {
-      numberLt: number;
-      numberKg: number;
+      numberWaterUsageLt: number;
+      numberLandfillKg: number;
       numberAssets: number;
-      numberCarbon: number;
+      numberCarbonKg: number;
     };
   };
 };
@@ -38,6 +39,17 @@ const Impact = ({ data }: ImpactProps) => {
     .padStart(2, "0")}/${startedAt.getFullYear()}`;
 
   const [dataUser, setDataUser] = useState("individual");
+  const { isSafari, isSmallScreen } = useBrowserDetection();
+  const gridInfoUser = isSafari
+    ? isSmallScreen
+      ? "grid-cols-1"
+      : "grid-cols-2"
+    : "grid-cols-1";
+  const gridCards = isSafari
+    ? isSmallScreen
+      ? "grid-cols-1"
+      : "grid-cols-4"
+    : "grid-cols-1";
 
   const onSubmit = (value: string) => {
     setDataUser(value);
@@ -46,9 +58,14 @@ const Impact = ({ data }: ImpactProps) => {
   const InfoUser = () => {
     if (data.user != undefined) {
       return (
-        <div className="grid grid-cols-1 md:grid-cols-2 text-black h-auto items-center gap-4 mb-4 text-sm">
+        <div
+          className={cn(
+            `grid md:grid-cols-2 text-black h-auto items-center gap-4 mb-4 text-sm `,
+            gridInfoUser
+          )}
+        >
           <div>
-            <p className="mt-100 flex-1 text-3xl font-bold">{data.user}</p>
+            <p className="flex-1 text-3xl font-bold">{data.user}</p>
             <p className="text-[#B8B8B8] text-lg">
               {t("startedAt")}
               <span className="font-bold">{formatDate}</span>
@@ -127,12 +144,12 @@ const Impact = ({ data }: ImpactProps) => {
         {Menu()}
         <div className="bg-white p-10 rounded-lg">
           {InfoUser()}
-          <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-4">
+          <div className={cn(`grid md:grid-cols-4 items-center gap-4 `, gridCards)}>
             <CardNumber
               number={
                 dataUser === "individual" && data.user != undefined
-                  ? data.contributionUser.numberLt
-                  : data.contributionOrganization.numberLt
+                  ? data.contributionUser.numberWaterUsageLt
+                  : data.contributionOrganization.numberWaterUsageLt
               }
               label={t("waterSaved")}
               className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/closeup-blue-sea-surface.jpg)] bg-cover bg-center"
@@ -140,8 +157,8 @@ const Impact = ({ data }: ImpactProps) => {
             <CardNumber
               number={
                 dataUser === "individual" && data.user != undefined
-                  ? data.contributionUser.numberKg
-                  : data.contributionOrganization.numberKg
+                  ? data.contributionUser.numberLandfillKg
+                  : data.contributionOrganization.numberLandfillKg
               }
               label={t("wasteSaved")}
               className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/sides-stacks-cardboard-folded.jpg)] bg-cover bg-center"
@@ -158,8 +175,8 @@ const Impact = ({ data }: ImpactProps) => {
             <CardNumber
               number={
                 dataUser === "individual" && data.user != undefined
-                  ? data.contributionUser.numberCarbon
-                  : data.contributionOrganization.numberCarbon
+                  ? data.contributionUser.numberCarbonKg
+                  : data.contributionOrganization.numberCarbonKg
               }
               label={t("carbonFootprintSave")}
               className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/pexels.png)] bg-cover bg-center"

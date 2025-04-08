@@ -1,12 +1,22 @@
+"use client";
+
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { CardTip } from "@/components/ui/card-tip";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { useBrowserDetection } from "@/hooks/use-browser-detection";
+import { cn } from "@/lib/utils";
 
-async function CareTips() {
-  const t = await getTranslations("Impact");
+const CareTips = () => {
+  const t = useTranslations("Impact");
+  const { isSafari, isSmallScreen } = useBrowserDetection();
+  const gridTips = isSafari
+    ? isSmallScreen
+      ? "grid-cols-1"
+      : "grid-cols-2"
+    : "grid-cols-1";
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10">
+    <div className={cn(`grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10 `, gridTips)}>
       <div>
         <div className="flex items-center gap-8">
           <p className="font-extrabold text-6xl text-left flex-1">
