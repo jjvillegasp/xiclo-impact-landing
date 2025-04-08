@@ -11,6 +11,7 @@ const AboutProject = async ({
   urlNewOrder: string;
 }) => {
   const t = await getTranslations("AboutProject");
+  
   return (
     <div className="container mx-auto max-h-screen bg-cover my-10 h-fit">
       <div className="ml-11 bg-[#97C355] w-1/2 h-6 rounded-t-lg"></div>
