@@ -36,7 +36,7 @@ const AboutProject = async ({
               className="w-fit items-center justify-self-end"
               href={urlNewOrder}
             >
-              <Button className="bg-white text-black">
+              <Button className="bg-white text-black hover:bg-white">
                 {t("placeNewOrder")}
               </Button>
             </Link>
