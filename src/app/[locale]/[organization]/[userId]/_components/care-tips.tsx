@@ -16,40 +16,33 @@ const CareTips = () => {
     : "grid-cols-1";
 
   return (
-    <div className={cn(`grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10 `, gridTips)}>
+    <div
+      className={cn(
+        `grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10`,
+        gridTips
+      )}
+    >
       <div>
         <div className="flex items-center gap-8">
           <p className="font-extrabold text-6xl text-left flex-1">
             {t("tipsOf")} <br /> {t("care")}
           </p>
-          <Avatar className="w-24 h-16 gap-4 static">
-            <AvatarImage src="/assets/images/assets.png" />
-          </Avatar>
         </div>
         <div className="my-5 text-justify text-xl">
-          <p>
-            {t("designAssets")}
-          </p>
+          <p>{t("designAssets")}</p>
           <br />
-          <p>
-            {t("careAssets")}
-          </p>
+          <p>{t("careAssets")}</p>
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <CardTip
-          icon="assets/images/microwave.png"
-          label={t("tipMicrowave")}
-          className="font-bold"
-        />
-        <CardTip icon="assets/images/stove.png" label={t("tipStove")} />
-        <CardTip icon="assets/images/soap.png" label={t("tipTwo")} />
-        <CardTip icon="assets/images/bowl.png" label={t("tipReturnCapped")} />
-        <CardTip icon="assets/images/bag.png" label={t("tipScratchBags")} />
-        <CardTip icon="assets/images/trash.png" label={t("tipThrow")} />
+        <CardTip icon="assets/images/microwave.png" label={t("tipMicrowave")} iconSize="w-11 h-11" />
+        <CardTip icon="assets/images/soap.png" label={t("tipTwo")} iconSize="w-10 h-10"/>
+        <CardTip icon="assets/images/bowl.png" label={t("tipReturnCapped")} iconSize="w-9 h-9 pl-2"/>
+        <CardTip icon="assets/images/bag.png" label={t("tipScratchBags")} iconSize="w-9 h-9 pl-2"/>
+        <CardTip icon="assets/images/trash.png" label={t("tipThrow")} iconSize="w-9 h-9 pl-2"/>
       </div>
     </div>
   );
-}
+};
 
 export default CareTips;

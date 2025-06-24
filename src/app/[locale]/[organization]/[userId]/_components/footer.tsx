@@ -34,7 +34,7 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             height={100}
           />
           <Link href={constant.xicloDownload}>
-            <Button className="mb-32 mt-16 bg-white text-black text-lg">
+            <Button className="mb-32 mt-16 bg-white text-black text-lg hover:bg-white">
               {t("moreAboutXiclo")}
             </Button>
           </Link>

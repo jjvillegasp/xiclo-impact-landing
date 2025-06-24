@@ -56,7 +56,7 @@ const Impact = ({ data }: ImpactProps) => {
   };
 
   const InfoUser = () => {
-    if (data.user != undefined) {
+    if (data.user != undefined && dataUser === "individual") {
       return (
         <div
           className={cn(
@@ -133,7 +133,7 @@ const Impact = ({ data }: ImpactProps) => {
   };
 
   return (
-    <div id="contribution-section" className="container mx-auto">
+    <div id="contribution-section" className="container mx-auto my-20">
       <div className="grid">
         <div className="flex flex-col items-center justify-center">
           <p className="text-6xl font-bold text-center">
@@ -182,9 +182,6 @@ const Impact = ({ data }: ImpactProps) => {
               className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/pexels.png)] bg-cover bg-center"
             />
           </div>
-        </div>
-        <div className="flex items-center justify-center h-20">
-          <ChevronDown color="#97C355" />
         </div>
       </div>
     </div>
