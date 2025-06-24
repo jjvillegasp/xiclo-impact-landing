@@ -47,7 +47,7 @@ export function useBrowserDetection(): BrowserInfo {
         isLargeScreen: width >= 1024,
       });
     }
-  }, []);
+  }, [innerWidth]);
 
   return browserInfo;
 }
