@@ -18,7 +18,7 @@ const CareTips = () => {
   return (
     <div
       className={cn(
-        `grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10 `,
+        `grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10`,
         gridTips
       )}
     >
