@@ -5,7 +5,7 @@ export async function getInfoLandingByUser(
   organization: string
 ) {
   const dataInit = {
-    organization: { name: "", logo: "", orderUrl: "" },
+    organization: { name: "", logo: "", orderUrl: "", webSite: "", logoSecond: "" },
     partners: [],
     started_at: new Date(),
     contributionOrganization: {

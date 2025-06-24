@@ -12,7 +12,7 @@ const CardPartner = React.forwardRef<
         ref={ref}
         {...props}
         className={cn(
-          "text-center bg-center bg-cover text-white h-40",
+          "aspect-4/2 bg-center bg-cover ",
           className
         )}
         style={{ backgroundImage: `url(${logo})` }}

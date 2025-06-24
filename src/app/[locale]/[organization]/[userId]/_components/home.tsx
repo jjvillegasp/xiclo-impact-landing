@@ -1,10 +1,11 @@
 import { getInfoLandingByUser } from "../../../../../lib/client/client";
 import AboutProject from "./about-project";
-import Header from "./header";
+import Start from "./start";
 import Impact from "./impact";
 import Partners from "./partners";
 import Footer from "./footer";
 import CareTips from "./care-tips";
+import MenuHeader from "./header";
 
 const Home = async ({
   userId,
@@ -24,27 +25,32 @@ const Home = async ({
 
   return (
     <>
-      <title className="capitalize">{`${toTitleCase(
-        organization
-      )} + Xiclo`}</title>
-      <main>
-        <Header
-          organizationLogo={data.organization.logo}
-          organizationVideo={data.organization.video}
-          urlNewOrder={data.organization.orderUrl}
-        />
-        <div className="mx-10">
-          <AboutProject
+        <title className="capitalize">{`${toTitleCase(
+          organization
+        )} + Xiclo`}</title>
+          <MenuHeader
             organizationLogo={data.organization.logo}
-            organizationName={data.organization.name}
             urlNewOrder={data.organization.orderUrl}
+            webSite={data.organization.webSite}
+            organizationLogoSecond={data.organization.logoSecond}
           />
-          <Impact data={data} />
-          <Partners partners={data.partners} />
-          <CareTips />
-        </div>
-        <Footer organizationName={data.organization.name} />
-      </main>
+
+        <main>
+          <Start
+            organizationVideo={data.organization.video}
+          />
+          <div className="mx-10">
+            <AboutProject
+              organizationLogo={data.organization.logo}
+              organizationName={data.organization.name}
+              urlNewOrder={data.organization.orderUrl}
+            />
+            <Impact data={data} />
+            <Partners partners={data.partners} />
+            <CareTips />
+          </div>
+          <Footer organizationName={data.organization.name} />
+        </main>
     </>
   );
 };
