@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { constant } from "@/constants";
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { useBrowserDetection } from "@/hooks/use-browser-detection";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = ({ organizationName }: { organizationName: string }) => {
   const h = useTranslations("Header");
@@ -63,7 +63,9 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             <Link href="#about-project">{h("aboutProject")}</Link>
           </Button>
         </div>
-        <div className={cn(`text-white text-sm text-end customer-center `, center)}>
+        <div
+          className={cn(`text-white text-sm text-end customer-center `, center)}
+        >
           <p>{`${t(
             "rightsReserved"
           )} ${organizationName} ${new Date().getFullYear()}`}</p>
