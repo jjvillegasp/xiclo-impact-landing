@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
