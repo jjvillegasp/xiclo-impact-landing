@@ -1,10 +1,9 @@
 "use client";
 
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { CardTip } from "@/components/ui/card-tip";
-import { useTranslations } from "next-intl";
 import { useBrowserDetection } from "@/hooks/use-browser-detection";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const CareTips = () => {
   const t = useTranslations("Impact");
@@ -35,11 +34,31 @@ const CareTips = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <CardTip icon="assets/images/microwave.png" label={t("tipMicrowave")} iconSize="w-11 h-11" />
-        <CardTip icon="assets/images/soap.png" label={t("tipTwo")} iconSize="w-10 h-10"/>
-        <CardTip icon="assets/images/bowl.png" label={t("tipReturnCapped")} iconSize="w-9 h-9 pl-2"/>
-        <CardTip icon="assets/images/bag.png" label={t("tipScratchBags")} iconSize="w-9 h-9 pl-2"/>
-        <CardTip icon="assets/images/trash.png" label={t("tipThrow")} iconSize="w-9 h-9 pl-2"/>
+        <CardTip
+          icon="assets/images/microwave.png"
+          label={t("tipMicrowave")}
+          iconSize="w-11 h-11"
+        />
+        <CardTip
+          icon="assets/images/soap.png"
+          label={t("tipTwo")}
+          iconSize="w-10 h-10"
+        />
+        <CardTip
+          icon="assets/images/bowl.png"
+          label={t("tipReturnCapped")}
+          iconSize="w-9 h-9 pl-2"
+        />
+        <CardTip
+          icon="assets/images/bag.png"
+          label={t("tipScratchBags")}
+          iconSize="w-9 h-9 pl-2"
+        />
+        <CardTip
+          icon="assets/images/trash.png"
+          label={t("tipThrow")}
+          iconSize="w-9 h-9 pl-2"
+        />
       </div>
     </div>
   );

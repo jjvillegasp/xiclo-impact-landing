@@ -1,11 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { useBrowserDetection } from "@/hooks/use-browser-detection";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
 
 const Header = ({
   organizationLogo,
@@ -29,21 +29,21 @@ const Header = ({
       ? "grid-cols-2"
       : " grid-cols-3"
     : " grid-cols-2";
-    
-  const handleScroll = () => {
+
+  const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
     if (scrollY > 20) {
       setBgColor("bg-white");
       if (organizationLogoSecond) {
-        setBgLogo(organizationLogoSecond)
-        setSizeLogo("max-w-10")
+        setBgLogo(organizationLogoSecond);
+        setSizeLogo("max-w-10");
       }
     } else {
       setBgColor("");
-      setBgLogo(organizationLogo)
-      setSizeLogo("")
+      setBgLogo(organizationLogo);
+      setSizeLogo("");
     }
-  };
+  }, [organizationLogo, organizationLogoSecond]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -51,6 +51,7 @@ const Header = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -81,7 +82,9 @@ const Header = ({
         </Button>
       </div>
       <Link className="w-fit items-center justify-self-end" href={urlNewOrder}>
-        <Button className="bg-black text-white text-base hover:bg-black">{t("newOrder")}</Button>
+        <Button className="bg-black text-white text-base hover:bg-black">
+          {t("newOrder")}
+        </Button>
       </Link>
     </header>
   );

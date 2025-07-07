@@ -47,6 +47,7 @@ export function useBrowserDetection(): BrowserInfo {
         isLargeScreen: width >= 1024,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return browserInfo;

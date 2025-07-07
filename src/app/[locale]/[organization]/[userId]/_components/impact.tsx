@@ -2,11 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { CardNumber } from "@/components/ui/card-number";
-import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
 import { useBrowserDetection } from "@/hooks/use-browser-detection";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 type ImpactProps = {
   data: {
@@ -144,7 +143,9 @@ const Impact = ({ data }: ImpactProps) => {
         {Menu()}
         <div className="bg-white p-10 rounded-lg">
           {InfoUser()}
-          <div className={cn(`grid md:grid-cols-4 items-center gap-4 `, gridCards)}>
+          <div
+            className={cn(`grid md:grid-cols-4 items-center gap-4 `, gridCards)}
+          >
             <CardNumber
               number={
                 dataUser === "individual" && data.user != undefined
