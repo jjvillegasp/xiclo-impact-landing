@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Header = ({
   organizationLogo,
@@ -21,6 +21,7 @@ const Header = ({
   const t = useTranslations("Header");
   const [bgColor, setBgColor] = useState("");
   const [bgLogo, setBgLogo] = useState(organizationLogo);
+  const [sizeLogo, setSizeLogo] = useState("");
   const { isSafari, isSmallScreen } = useBrowserDetection();
   const display = isSafari && isSmallScreen ? "hidden" : "";
   const grid = isSafari
@@ -29,18 +30,20 @@ const Header = ({
       : " grid-cols-3"
     : " grid-cols-2";
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
     if (scrollY > 20) {
       setBgColor("bg-white");
       if (organizationLogoSecond) {
         setBgLogo(organizationLogoSecond);
+        setSizeLogo("max-w-10");
       }
     } else {
       setBgColor("");
       setBgLogo(organizationLogo);
+      setSizeLogo("");
     }
-  };
+  }, [organizationLogo, organizationLogoSecond]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -48,6 +51,7 @@ const Header = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -58,7 +62,7 @@ const Header = ({
         grid
       )}
     >
-      <Avatar className="w-32 h-10">
+      <Avatar className={cn("w-32 h-10 ", sizeLogo)}>
         <Link href={webSite}>
           <AvatarImage src={bgLogo} />
         </Link>
