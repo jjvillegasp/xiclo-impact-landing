@@ -6,6 +6,7 @@ import { useBrowserDetection } from "@/hooks/use-browser-detection";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import Link from "next/link";
 
 type ImpactProps = {
   data: {
@@ -107,9 +108,11 @@ const Impact = ({ data }: ImpactProps) => {
             )}
             type="submit"
           >
-            {t("organizationFootprint", {
-              organization: data.organization.name,
-            })}
+            <Link href={""}>
+              {t("organizationFootprint", {
+                organization: data.organization.name,
+              })}
+            </Link>
           </Button>
           <Button
             variant="link"
@@ -122,7 +125,7 @@ const Impact = ({ data }: ImpactProps) => {
             )}
             type="submit"
           >
-            {t("individualFootprint")}
+            <Link href={""}>{t("individualFootprint")} </Link>
           </Button>
         </div>
       );
@@ -171,7 +174,7 @@ const Impact = ({ data }: ImpactProps) => {
                   : data.contributionOrganization.numberAssets
               }
               label={t("packagingSaved")}
-              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/asset-save.png)] bg-cover bg-center"
+              className="bg-[linear-gradient(to_top,rgba(3,3,3,0),rgba(0,0,0,0.7)),url(/assets/images/asset-save.jpg)] bg-cover bg-center"
             />
             <CardNumber
               number={

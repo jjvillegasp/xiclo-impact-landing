@@ -5,9 +5,10 @@
     "newOrder": "Place my order",
     "yourOrdersGo": "YOUR ORDERS GO,",
     "packagesComeBack": "THE PACKAGES COME BACK",
-    "discoverImpact": "Descubra el impacto que hemos logrado juntos con el uso de empaques retornables.",
-    "viewVideo": "Ver video",
-    "viewImpact": "Ver impacto"
+    "discoverImpact": "Discover the impact we've made together by using returnable packaging.",
+    "viewVideo": "See video",
+    "viewImpact": "See impact",
+    "careTips": "Care tips"
   },
   "Impact": {
     "contributionNumbers": "Contribution in numbers",
@@ -27,9 +28,9 @@
     "care": "tips",
     "designAssets": "These packages are designed to guarantee safe and clean food transportation. When returned, they go through an industrial washing and control process before returning to the restaurant.",
     "careAssets": "Take care of them, so they can be reused many times and our contribution to the planet will be greater.",
-    "startedAt": "You have generated less waste since the:",
+    "startedAt": "You have generated less waste since the: ",
     "usersFootprint": "You are in the {top} place among users who have reduced their environmental impact the most.",
-    "carbonFootprintSave": "Kg of carbon footprint savings",
+    "carbonFootprintSave": "Kg of savings in carbon footprint",
     "reducingConsumption": "By reducing the consumption of single-use packaging, ",
     "togetherSaved": "together we have saved:"
   },
@@ -50,7 +51,7 @@
     "ordersReturnable": "Place your orders in our brands:"
   },
   "Footer": {
-    "alliance": "La alianza {organization} + Xiclo nace con el propósito de eliminar los empaques de un solo uso en los domicilios de nuestros restaurantes. Al devolverlos, garantizamos su lavado y reutilización constante, reduciendo la generación de residuos y minimizando la huella hídrica y de carbono",
+    "alliance": "The {organization} + Xiclo alliance was born with the purpose of eliminating single-use packaging in the homes of our restaurants. By returning them, we guarantee their constant washing and reuse, reducing the generation of waste and minimizing the water and carbon footprint.",
     "moreAboutXiclo": "More about Xiclo",
     "rightsReserved": "© Rights reserved. ",
     "siteByE": "Site by E"
