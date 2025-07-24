@@ -24,7 +24,7 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
       : "";
 
   return (
-    <footer className="bg-black py-14 px-36">
+    <footer className="bg-black py-14 px-36 footer-padding">
       <div className={cn(`grid md:grid-cols-2 `, gridFooter)}>
         <div className={cn(`customer-center `)}>
           <Image
@@ -33,11 +33,10 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             width={150}
             height={100}
           />
-          <Link href={constant.xicloDownload}>
-            <Button className="mb-32 mt-16 bg-white text-black text-lg hover:bg-white">
-              {t("moreAboutXiclo")}
-            </Button>
-          </Link>
+          <Button className="mb-32 mt-16 bg-white text-black text-lg hover:bg-white">
+            {" "}
+            <Link href={constant.xicloDownload}>{t("moreAboutXiclo")} </Link>
+          </Button>
         </div>
         <div className="text-white text-lg">
           <p>{t("alliance", { organization: organizationName })}</p>
@@ -63,7 +62,9 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             <Link href="#about-project">{h("aboutProject")}</Link>
           </Button>
         </div>
-        <div className={cn(`text-white text-sm text-end customer-center `, center)}>
+        <div
+          className={cn(`text-white text-sm text-end customer-center `, center)}
+        >
           <p>{`${t(
             "rightsReserved"
           )} ${organizationName} ${new Date().getFullYear()}`}</p>

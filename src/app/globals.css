@@ -191,6 +191,14 @@
       .partner-margin {
         margin-top: 5rem;
       }
+
+      .footer-padding {
+        padding-inline: calc(var(--spacing) * 14) !important;
+      }
+
+      .text-hidden {
+        display: none;
+      }
     }
 
     @supports (-webkit-touch-callout: none) {
@@ -202,6 +210,11 @@
     @media only screen and (width > 768px) {
       .about-center {
         justify-content: flex-end;
+      }
+
+      .px-36 {
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
     }
   }
