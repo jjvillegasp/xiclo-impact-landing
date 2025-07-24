@@ -7,7 +7,8 @@
     "packagesComeBack": " LOS EMPAQUES VUELVEN",
     "discoverImpact": "Descubra el impacto que hemos logrado juntos con el uso de empaques retornables.",
     "viewVideo": "Ver video",
-    "viewImpact": "Ver impacto"
+    "viewImpact": "Ver impacto",
+    "careTips": "Tips de cuidado"
   },
   "Impact": {
     "contributionNumbers": "Contribución en cifras",
@@ -27,9 +28,9 @@
     "care": "cuidado",
     "designAssets": "Estos empaques están diseñados para garantizar el transporte seguro y limpio de alimentos. Al devolverlos, pasan por un proceso industrial de lavado y control antes de volver al restaurante.",
     "careAssets": "Cuídelos, así se podrán reutilizar muchas veces y nuestro aporte al planeta será mayor.",
-    "startedAt": "Usted ha generado menos basura desde el:",
+    "startedAt": "Usted ha generado menos basura desde el: ",
     "usersFootprint": "Usted está en el lugar <b>{top}</b> entre los usuarios que más han reducido su impacto ambiental.",
-    "carbonFootprintSave": "Kg de ahorro huella carbono",
+    "carbonFootprintSave": "Kg de ahorro en huella de carbono",
     "reducingConsumption": "Al reducir el consumo de empaques de un solo uso, ",
     "togetherSaved": "juntos hemos ahorrado:"
   },
@@ -50,7 +51,7 @@
     "ordersReturnable": "Haga sus pedidos en nuestras marcas:"
   },
   "Footer": {
-    "alliance": "La alianza {organization} + Xiclo nace con el propósito de eliminar los empaques de un solo uso en los domicilios de nuestros restaurantes. Al devolverlos, garantizamos su lavado y reutilización constante, reduciendo la generación de residuos y minimizando la huella hídrica y de carbono",
+    "alliance": "La alianza {organization} + Xiclo nace con el propósito de eliminar los empaques de un solo uso en los domicilios de nuestros restaurantes. Al devolverlos, garantizamos su lavado y reutilización constante, reduciendo la generación de residuos y minimizando la huella hídrica y de carbono.",
     "moreAboutXiclo": "Más sobre Xiclo",
     "rightsReserved": "© Derechos Reservados. ",
     "siteByE": "Site by E"
