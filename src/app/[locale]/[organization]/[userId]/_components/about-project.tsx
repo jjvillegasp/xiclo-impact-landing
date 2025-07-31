@@ -25,7 +25,7 @@ const AboutProject = async ({
           {organizationName} <br /> {t("moreXiclo")}
         </p>
         <br />
-        <div className="text-lg text-left w-150">
+        <div className="text-lg w-150 text-left">
           <p>{t("joinXiclo")}</p>
           <br />
           <p>{t("enjoyDishes")}</p>
