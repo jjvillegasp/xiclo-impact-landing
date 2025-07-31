@@ -17,7 +17,7 @@ const AboutProject = async ({
       <div className="ml-11 bg-[#97C355] w-1/2 h-6 rounded-t-lg"></div>
       <div
         id="about-project"
-        className={"margin-sc p-7 text-white rounded-xl bg-impact bg-cover"}
+        className={"scroll-mt-32 margin-sc px-7 text-white rounded-xl bg-impact bg-cover p-4"}
       >
         <p className="font-semibold text-xl">{t("goodbyePacking")}</p>
         <br />
@@ -25,7 +25,7 @@ const AboutProject = async ({
           {organizationName} <br /> {t("moreXiclo")}
         </p>
         <br />
-        <div className="text-lg text-left">
+        <div className="text-lg text-left w-150">
           <p>{t("joinXiclo")}</p>
           <br />
           <p>{t("enjoyDishes")}</p>

@@ -18,7 +18,7 @@ const CareTips = () => {
     <div
       id="care-tips"
       className={cn(
-        `grid md:grid-cols-2 p-8 gap-10 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10`,
+        `scroll-mt-32 grid md:grid-cols-2 p-8 gap-2 text-center rounded-lg bg-white text-black h-auto items-center mx-auto container my-10`,
         gridTips
       )}
     >
@@ -28,7 +28,7 @@ const CareTips = () => {
             {t("tipsOf")} <br /> {t("care")}
           </p>
         </div>
-        <div className="my-5 text-left text-xl">
+        <div className="my-5 text-left text-tip-xl">
           <p>{t("designAssets")}</p>
           <br />
           <p>{t("careAssets")}</p>

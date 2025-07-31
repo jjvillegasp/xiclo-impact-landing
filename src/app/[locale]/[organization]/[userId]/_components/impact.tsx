@@ -135,10 +135,10 @@ const Impact = ({ data }: ImpactProps) => {
   };
 
   return (
-    <div id="contribution-section" className="container mx-auto my-20">
+    <div id="contribution-section" className="scroll-mt-32 container mx-auto my-30">
       <div className="grid">
         <div className="flex flex-col items-center justify-center">
-          <p className="text-6xl font-bold text-center">
+          <p className="text-6xl font-bold text-center mt-5">
             {t("contributionNumbers")}
           </p>
           <p className="text-2xl text-center">{t("currentData")}</p>
