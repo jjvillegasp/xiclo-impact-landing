@@ -153,16 +153,16 @@
       }
 
       .text-xl {
-        font-size: 1.125em;
+        font-size: 2.125em;
       }
 
       .text-8xl {
-        font-size: 2.75em !important;
+        font-size: 3.00em !important;
         line-height: 51px !important;
       }
 
       .text-lg {
-        font-size: 0.8em !important;
+        font-size: 1.125em !important;
       }
 
       .menu {
@@ -191,6 +191,30 @@
       .partner-margin {
         margin-top: 5rem;
       }
+
+      .footer-padding {
+        padding-inline: calc(var(--spacing) * 10) !important;
+      }
+
+      .text-hidden {
+        display: none;
+      }
+
+      .button-hidden {
+        display: block !important;
+      }
+
+      .text-tip-xl {
+        font-size: 1.0em;
+      }
+
+      .text-tip-lg {
+        font-size: 1.125em !important;
+      }
+
+      .w-150 {
+        width: 95% !important;
+      }
     }
 
     @supports (-webkit-touch-callout: none) {
@@ -202,6 +226,27 @@
     @media only screen and (width > 768px) {
       .about-center {
         justify-content: flex-end;
+      }
+
+      .px-36 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .button-hidden {
+        display: none !important;
+      }
+
+      .text-tip-xl {
+        font-size: 1.25em;
+      }
+
+      .text-tip-lg {
+        font-size: 1.125rem !important;
+      }
+
+      .w-150 {
+        width: 50% !important;
       }
     }
   }

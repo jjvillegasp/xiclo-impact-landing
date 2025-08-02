@@ -14,9 +14,9 @@ const Partners = ({
   const t = useTranslations("Partner");
   const gridPartners = isSafari
     ? isSmallScreen
-      ? "grid-cols-2"
+      ? "grid-cols-1"
       : "grid-cols-4"
-    : "grid-cols-2";
+    : "grid-cols-1";
 
   if (partners.length > 0) {
     return (

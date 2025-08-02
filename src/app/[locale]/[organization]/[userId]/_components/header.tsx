@@ -70,22 +70,27 @@ const Header = ({
       <div className={cn("flex justify-center gap-8 menu ", display)}>
         <Button
           variant="link"
-          className="text-black font-semibold hover:underline decoration-black text-lg"
+          className="text-black hover:underline decoration-black text-lg"
+        >
+          <Link href="#about-project">{t("aboutProject")}</Link>
+        </Button>
+
+        <Button
+          variant="link"
+          className="text-black hover:underline decoration-black text-lg"
         >
           <Link href="#contribution-section">{t("impact")}</Link>
         </Button>
         <Button
           variant="link"
-          className="text-black font-semibold hover:underline decoration-black text-lg"
+          className="text-black hover:underline decoration-black text-lg"
         >
-          <Link href="#about-project">{t("aboutProject")}</Link>
+          <Link href="#care-tips">{t("careTips")}</Link>
         </Button>
       </div>
-      <Link className="w-fit items-center justify-self-end" href={urlNewOrder}>
-        <Button className="bg-black text-white text-base hover:bg-black">
-          {t("newOrder")}
-        </Button>
-      </Link>
+      <Button className="bg-black text-white text-base hover:bg-black w-fit items-center justify-self-end">
+        <Link href={urlNewOrder}>{t("newOrder")}</Link>
+      </Button>
     </header>
   );
 };

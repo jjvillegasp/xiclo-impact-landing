@@ -16,7 +16,7 @@ const CardTip = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "flex items-center bg-[#F1F1F1] rounded-lg p-2.5 text-left h-16",
+        "flex items-center bg-[#F1F1F1] rounded-lg p-2.5 text-left",
         className
       )}
       {...props}
@@ -24,7 +24,7 @@ const CardTip = React.forwardRef<
       <Avatar className={iconSize}>
         <AvatarImage src={`/${icon}`} />
       </Avatar>
-      <p className="ml-6 text-lg">{label}</p>
+      <p className="ml-6 text-tip-lg">{label}</p>
     </div>
   );
 });

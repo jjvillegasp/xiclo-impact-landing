@@ -16,23 +16,23 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useBrowserDetection } from "@/hooks/use-browser-detection";
 
-const Start = ({
-  organizationVideo,
-}: {
-  organizationVideo: string;
-}) => {
+const Start = ({ organizationVideo }: { organizationVideo: string }) => {
   const t = useTranslations("Header");
   const { isSafari, isSmallScreen } = useBrowserDetection();
   const fontSizeSubtitle = isSafari && isSmallScreen ? "text-base" : "";
   const fontSizeTitle = isSafari && isSmallScreen ? "text-6xl" : "";
 
   return (
-    <div className={cn(`content-center h-screen bg-header bg-cover h-screen bg-no-repeat bg-center`)}>
+    <div
+      className={cn(
+        `content-center h-screen bg-header bg-cover h-screen bg-no-repeat bg-center`
+      )}
+    >
       <div className="justify-items-center text-center text-white mx-2">
         <span className={cn(`text-8xl `, fontSizeTitle)}>
           {t("yourOrdersGo")}
         </span>
-        <br />
+        <br className="text-hidden" />
         <span className={cn(`text-8xl font-extrabold `, fontSizeTitle)}>
           {t("packagesComeBack")}
         </span>
@@ -67,13 +67,16 @@ const Start = ({
             </DialogOverlay>
           </Dialog>
         </span>
-        <Link href="#contribution-section">
-          <Button className="bg-black ml-2 size-16 w-xs mt-1 text-base hover:bg-black">
+        <Button className="bg-white size-14 w-auto text-base hover:bg-white text-black text-xl">
+          <Link href="#contribution-section">
             <Play className="invisible w-1 pointer-events-none" size={"15"} />
             {t("viewImpact")}
-            <Play className="invisible w-1 pointer-events-none" size={"15"} />
-          </Button>
-        </Link>
+            <Play
+              className="invisible w-1 pointer-events-none"
+              size={"15"}
+            />
+          </Link>
+        </Button>
       </div>
     </div>
   );

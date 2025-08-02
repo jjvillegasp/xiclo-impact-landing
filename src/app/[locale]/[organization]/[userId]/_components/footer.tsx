@@ -24,45 +24,47 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
       : "";
 
   return (
-    <footer className="bg-black py-14 px-36">
+    <footer className="bg-black py-14 px-36 footer-padding">
       <div className={cn(`grid md:grid-cols-2 `, gridFooter)}>
-        <div className={cn(`customer-center `)}>
+        <div className="button-hidden">
+          <div className="flex gap-8">
+            <Button
+              variant="link"
+              className="bg-white text-black font-semibold hover:underline decoration-white text-sm w-sm button-hidden"
+            >
+              <Link href="#contribution-section">
+                <span>{h("impact")}</span>
+              </Link>
+            </Button>
+            <Button
+              variant="link"
+              className="bg-white text-black font-semibold hover:underline decoration-white text-sm w-sm button-hidden"
+            >
+              <Link href="#about-project">
+                <span>{h("aboutProject")}</span>
+              </Link>
+            </Button>
+          </div>
+          <div className="text-white text-lg mt-20 my-20">
+            <p>{t("alliance", { organization: organizationName })}</p>
+          </div>
+        </div>
+        <div className={cn(`customer-center mt-5`)}>
           <Image
             alt="Xiclo powered by logo"
             src="/assets/images/xiclo-powered.svg"
             width={150}
             height={100}
           />
-          <Link href={constant.xicloDownload}>
-            <Button className="mb-32 mt-16 bg-white text-black text-lg hover:bg-white">
-              {t("moreAboutXiclo")}
-            </Button>
-          </Link>
+          <Button className="mb-10 mt-16 bg-white text-black text-lg hover:bg-white">
+            <Link href={constant.xicloDownload}>{t("moreAboutXiclo")} </Link>
+          </Button>
         </div>
-        <div className="text-white text-lg">
+        <div className="text-white text-lg text-hidden">
           <p>{t("alliance", { organization: organizationName })}</p>
         </div>
       </div>
-      <div
-        className={cn(
-          `grid md:grid-cols-2 gap-4 mt-10 customer-center `,
-          gridFooter
-        )}
-      >
-        <div>
-          <Button
-            variant="link"
-            className="text-white font-semibold hover:underline decoration-white text-sm"
-          >
-            <Link href="#contribution-section">{h("impact")}</Link>
-          </Button>
-          <Button
-            variant="link"
-            className="text-white font-semibold hover:underline decoration-white text-sm"
-          >
-            <Link href="#about-project">{h("aboutProject")}</Link>
-          </Button>
-        </div>
+      <div className={cn(`mt-10 customer-center `, gridFooter)}>
         <div
           className={cn(`text-white text-sm text-end customer-center `, center)}
         >
