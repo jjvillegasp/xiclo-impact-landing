@@ -12,10 +12,11 @@ const Partners = ({
 }) => {
   const { isSafari, isSmallScreen } = useBrowserDetection();
   const t = useTranslations("Partner");
+  const gridP = partners.length >= 4 ? "grid-cols-4" : "grid-cols-" + partners.length
   const gridPartners = isSafari
     ? isSmallScreen
       ? "grid-cols-1"
-      : "grid-cols-4"
+      : gridP
     : "grid-cols-1";
 
   if (partners.length > 0) {
@@ -33,7 +34,7 @@ const Partners = ({
         </p>
         <p className="mt-5 text-2xl">{t("ordersReturnable")}</p>
         <br />
-        <div className={cn(`grid md:grid-cols-4 gap-2 `, gridPartners)}>
+        <div className={cn(`grid `, `md:` + gridP, `gap-2 `, gridPartners)}>
           {partners.map((partner) => (
             <CardPartner
               logo={partner.logo}
