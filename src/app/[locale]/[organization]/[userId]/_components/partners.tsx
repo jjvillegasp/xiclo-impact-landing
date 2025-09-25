@@ -13,6 +13,7 @@ const Partners = ({
   const { isSafari, isSmallScreen } = useBrowserDetection();
   const t = useTranslations("Partner");
   const gridP = partners.length >= 4 ? "grid-cols-4" : "grid-cols-" + partners.length
+  
   const gridPartners = isSafari
     ? isSmallScreen
       ? "grid-cols-1"
