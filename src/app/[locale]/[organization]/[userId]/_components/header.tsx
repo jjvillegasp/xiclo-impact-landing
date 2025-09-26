@@ -24,6 +24,7 @@ const Header = ({
   const [sizeLogo, setSizeLogo] = useState("");
   const { isSafari, isSmallScreen } = useBrowserDetection();
   const display = isSafari && isSmallScreen ? "hidden" : "";
+
   const grid = isSafari
     ? isSmallScreen
       ? "grid-cols-2"
