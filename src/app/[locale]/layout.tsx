@@ -4,19 +4,17 @@ import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Xiclo",
   description: "Xiclo landing",
 };
 
-import { Wix_Madefor_Display } from "next/font/google";
-
-const font = Wix_Madefor_Display({
-  subsets: ["latin"],
+const font = localFont({
+  src: "../../fonts/Montserrat-Light.ttf",
   weight: "400",
-  variable: "--font-wix-madefor-display-wght",
-  display: "swap",
+  style: "normal",
 });
 
 export default async function LocaleLayout({
@@ -42,8 +40,8 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body
         className={cn(
-          "min-h-screen bg-background font-wixMadefor antialiased w-full max-w-full",
-          font.variable
+          "min-h-screen bg-background antialiased w-full max-w-full",
+          font.className
         )}
       >
         <NextIntlClientProvider messages={messages}>
