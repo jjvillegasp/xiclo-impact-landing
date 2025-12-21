@@ -104,7 +104,7 @@ const Impact = ({ data }: ImpactProps) => {
               "font-semibold text-1xl decoration-[#97C355] justify-end ",
               dataUser === "organization"
                 ? "hover:underline underline"
-                : "text-[#C4C4C4]"
+                : "text-[#5C5A5A]"
             )}
             type="submit"
           >
@@ -121,7 +121,7 @@ const Impact = ({ data }: ImpactProps) => {
               "font-semibold text-1xl decoration-[#97C355] justify-start ",
               dataUser === "individual"
                 ? "hover:underline underline"
-                : "text-[#C4C4C4]"
+                : "text-[#5C5A5A]"
             )}
             type="submit"
           >
@@ -135,10 +135,10 @@ const Impact = ({ data }: ImpactProps) => {
   };
 
   return (
-    <div id="contribution-section" className="scroll-mt-32 container mx-auto my-30">
+    <div id="contribution-section" className="scroll-mt-32 container mx-auto">
       <div className="grid">
         <div className="flex flex-col items-center justify-center">
-          <p className="text-6xl font-bold text-center mt-5">
+          <p className="text-6xl font-bold text-center">
             {t("contributionNumbers")}
           </p>
           <p className="text-2xl text-center">{t("currentData")}</p>

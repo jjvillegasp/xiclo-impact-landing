@@ -28,7 +28,7 @@ const CareTips = () => {
             {t("tipsOf")} <br /> {t("care")}
           </p>
         </div>
-        <div className="my-5 text-left text-tip-xl">
+        <div className="my-5 mr-8 text-left text-tip-xl">
           <p>{t("designAssets")}</p>
           <br />
           <p>{t("careAssets")}</p>

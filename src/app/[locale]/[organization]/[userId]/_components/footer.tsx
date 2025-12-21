@@ -30,7 +30,7 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
           <div className="flex gap-8">
             <Button
               variant="link"
-              className="bg-white text-black font-semibold hover:underline decoration-white text-sm w-sm button-hidden"
+              className="bg-white text-black font-extrabold hover:underline decoration-white text-base w-sm button-hidden"
             >
               <Link href="#contribution-section">
                 <span>{h("impact")}</span>
@@ -38,7 +38,7 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             </Button>
             <Button
               variant="link"
-              className="bg-white text-black font-semibold hover:underline decoration-white text-sm w-sm button-hidden"
+              className="bg-white text-black font-extrabold hover:underline decoration-white text-base w-sm button-hidden"
             >
               <Link href="#about-project">
                 <span>{h("aboutProject")}</span>
@@ -56,7 +56,7 @@ const Footer = ({ organizationName }: { organizationName: string }) => {
             width={150}
             height={100}
           />
-          <Button className="mb-10 mt-16 bg-white text-black text-lg hover:bg-white">
+          <Button className="mb-10 mt-16 bg-white text-black text-base hover:bg-white font-extrabold">
             <Link href={constant.xicloDownload}>{t("moreAboutXiclo")} </Link>
           </Button>
         </div>
