@@ -89,7 +89,7 @@ const Header = ({
           <Link href="#care-tips">{t("careTips")}</Link>
         </Button>
       </div>
-      <Button className="bg-black text-white text-base hover:bg-black w-fit items-center justify-self-end">
+      <Button className="bg-black text-white text-base hover:bg-black w-fit items-center justify-self-end font-extrabold">
         <Link href={urlNewOrder}>{t("newOrder")}</Link>
       </Button>
     </header>

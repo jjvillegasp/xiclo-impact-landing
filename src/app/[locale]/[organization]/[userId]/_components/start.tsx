@@ -33,7 +33,7 @@ const Start = ({ organizationVideo }: { organizationVideo: string }) => {
           {t("yourOrdersGo")}
         </span>
         <br className="text-hidden" />
-        <span className={cn(`text-8xl font-extrabold `, fontSizeTitle)}>
+        <span className={cn(`text-8xl `, fontSizeTitle)}>
           {t("packagesComeBack")}
         </span>
         <br />
@@ -67,7 +67,7 @@ const Start = ({ organizationVideo }: { organizationVideo: string }) => {
             </DialogOverlay>
           </Dialog>
         </span>
-        <Button className="bg-white size-14 w-auto text-base hover:bg-white text-black text-xl">
+        <Button className="bg-white w-auto text-base hover:bg-white text-black text-xl font-extrabold">
           <Link href="#contribution-section">
             <Play className="invisible w-1 pointer-events-none" size={"15"} />
             {t("viewImpact")}

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const font = localFont({
-  src: "../../fonts/Montserrat-Light.ttf",
+  src: "../../fonts/Montserrat-Regular.ttf",
   weight: "400",
   style: "normal",
 });

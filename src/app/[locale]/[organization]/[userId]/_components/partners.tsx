@@ -22,7 +22,7 @@ const Partners = ({
 
   if (partners.length > 0) {
     return (
-      <div className={cn(`container mx-auto p-8 md:p-0 partner-margin `)}>
+      <div className={cn(`container mx-auto p-8 md:p-0 partner-margin mt-5`)}>
         <p className="text-2xl">
           {t("nowReturn")} <span className="font-extrabold">{t("easier")}</span>
           <span className="font-extrabold">{t("moreEfficient")}</span>
@@ -30,7 +30,7 @@ const Partners = ({
         <br />
         <p className="text-6xl text-[#97C355]">
           {t("startTo")}{" "}
-          <span className="font-extrabold">{t("reduceFootprint")}</span>{" "}
+          <span>{t("reduceFootprint")}</span>{" "}
           {t("today")}
         </p>
         <p className="mt-5 text-2xl">{t("ordersReturnable")}</p>
