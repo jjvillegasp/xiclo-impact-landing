@@ -15,7 +15,11 @@ const CardPartner = React.forwardRef<
           "aspect-4/2 bg-center bg-cover ",
           className
         )}
-        style={{ backgroundImage: `url(${logo})` }}
+        style={{ 
+          backgroundImage: `url(${logo})`,
+          imageRendering: 'auto',
+          willChange: 'transform'
+        }}
       ></div>
     </Link>
   );
