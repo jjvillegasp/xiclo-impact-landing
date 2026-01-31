@@ -65,7 +65,7 @@ const Header = ({
     >
       <Avatar className={cn("w-32 h-10 ", sizeLogo)}>
         <Link href={webSite}>
-          <AvatarImage src={bgLogo} />
+          <AvatarImage src={bgLogo} loading="eager" />
         </Link>
       </Avatar>
       <div className={cn("flex justify-center gap-8 menu ", display)}>

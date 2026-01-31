@@ -6,6 +6,7 @@ import Partners from "./partners";
 import Footer from "./footer";
 import CareTips from "./care-tips";
 import MenuHeader from "./header";
+import ImagePreloader from "./image-preloader";
 
 const Home = async ({
   userId,
@@ -25,6 +26,7 @@ const Home = async ({
 
   return (
     <>
+      <ImagePreloader />
         <title className="capitalize">{`${toTitleCase(
           organization
         )} + Xiclo`}</title>
