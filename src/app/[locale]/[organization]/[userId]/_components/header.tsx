@@ -58,7 +58,7 @@ const Header = ({
   return (
     <header
       className={cn(
-        `grid md:grid-cols-3 text-white justify-items-stretch sticky w-full p-4 top-0 z-100 bg-white`,
+        `grid md:grid-cols-3 text-white justify-items-stretch sticky w-full p-4 top-0 z-40 bg-white`,
         bgColor,
         grid
       )}
