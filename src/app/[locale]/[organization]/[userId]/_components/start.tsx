@@ -48,7 +48,7 @@ const Start = ({ organizationVideo }: { organizationVideo: string }) => {
               <DialogTitle />
             </DialogHeader>
             <DialogTrigger asChild>
-              <Button className="bg-black size-16 w-xs text-white mt-1 text-base hover:bg-black">
+              <Button className="bg-white w-auto text-base hover:bg-white text-black text-xl font-extrabold mr-5">
                 <Play className="fill-white mr-2" size={"15"} />
                 {t("viewVideo")}
                 <Play
