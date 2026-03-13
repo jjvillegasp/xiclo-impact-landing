@@ -33,6 +33,7 @@ const Header = ({
 
   const handleScroll = useCallback(() => {
     const scrollY = window.scrollY;
+
     if (scrollY > 20) {
       setBgColor("bg-white");
       if (organizationLogoSecond) {
